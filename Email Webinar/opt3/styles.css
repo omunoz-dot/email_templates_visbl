@@ -1,0 +1,136 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  
+  .email-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Logo */
+  .logo img {
+    max-width: 120px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Headline */
+  .headline {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0047cc;
+    text-align: left;
+  }
+  
+  .intro {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 20px;
+  }
+  
+  /* Hero Image */
+  .hero img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  /* Webinar Info Text */
+  .webinar-text {
+    font-size: 15px;
+    margin: 15px 0;
+  }
+  
+  /* Benefits */
+  .benefits-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0 15px;
+  }
+  
+  .benefits {
+    margin: 20px 0;
+  }
+  
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .benefit .icon {
+    font-size: 20px;
+    background: #0047cc;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 10px;
+  }
+  
+  /* CTA */
+  .closing {
+    margin: 20px 0;
+    font-weight: 500;
+  }
+  
+  .btn {
+    display: block;
+    text-align: center;
+    background: #0047cc;
+    color: #fff;
+    padding: 14px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 60%;
+  }
+  
+  .btn:hover {
+    background: #003399;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f2f4f9;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  footer .footer-links {
+    margin-top: 10px;
+  }
+  
+  footer .footer-links a {
+    color: #0047cc;
+    text-decoration: none;
+  }
+  
+  footer .footer-links a:hover {
+    text-decoration: underline;
+  }

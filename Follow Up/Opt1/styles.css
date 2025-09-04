@@ -1,0 +1,163 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  
+  .email-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Logo */
+  .logo img {
+    max-width: 120px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* Headline */
+  .headline {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0047cc;
+    margin-bottom: 10px;
+  }
+  
+  .intro {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  /* Webinar Card */
+  .webinar-card {
+    background: #0047cc;
+    color: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .webinar-card .subheader {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  
+  .webinar-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  .btn-outline {
+    display: inline-block;
+    background: #fff;
+    color: #0047cc;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-outline:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Benefits */
+  .benefits-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0 15px;
+  }
+  
+  .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .benefit .icon {
+    font-size: 20px;
+    background: #0047cc;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+  }
+  
+  /* CTA */
+  .closing {
+    text-align: center;
+    margin: 25px 0;
+  }
+  
+  .btn {
+    display: block;
+    text-align: center;
+    background: #0047cc;
+    color: #fff;
+    padding: 14px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 60%;
+  }
+  
+  .btn:hover {
+    background: #003399;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f2f4f9;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  footer .footer-links {
+    margin-top: 10px;
+  }
+  
+  footer .footer-links a {
+    color: #0047cc;
+    text-decoration: none;
+  }
+  
+  footer .footer-links a:hover {
+    text-decoration: underline;
+  }
