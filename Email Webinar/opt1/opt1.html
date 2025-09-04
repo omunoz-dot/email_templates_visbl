@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISBL Webinar Invitation</title>
+  <style>
+
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9faff;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h2 {
+        margin: 0px;
+    }
+    
+    h3 {
+        margin: 0px;
+    }
+    
+    p {
+        margin: 0px;
+    }
+    
+    .email-container {
+        max-width: 600px;
+        display: flex;
+        padding: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .logo {
+        display: flex;
+        padding: 18px 32px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 100% !important;
+        align-self: stretch;
+        margin: 0 auto;
+    }
+    
+    .subheader {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        border-bottom: 1px solid #A8ADBF;
+        margin-bottom: 24px;
+    }
+    
+    .headline {
+        align-self: stretch;
+        color: #002BC6;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 122%;
+    }
+    
+    .subtext {
+        align-self: stretch;
+        color: #000;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 122%;
+    }
+    
+    .hero-text {
+        align-self: stretch;
+        color: #002BC6;
+        text-align: center;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    
+    .webinar-card {
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+        background: #002BC6;
+    }
+    
+    .webinar-card p {
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    .webinar-card strong {
+        color: #FFF;
+        font-weight: 600;
+    }
+    
+    .webinar-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 48px;
+        align-self: stretch;
+    }
+    
+    .webinar-info-date,
+    .webinar-info-time {
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        gap: 10px;
+    }
+    
+    .webinar-info-date-icon-wrapper,
+    .webinar-info-time-icon-wrapper {
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        background: #E4E8F7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .webinar-info-btn {
+        display: flex;
+        height: 48px;
+        padding: 10px 52px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45px;
+        background: #FFF;
+        color: #002BC6;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: lowercase;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .intro-section strong {
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    
+    .intro-section p {
+        color: #000;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin: 25px 0;
+        text-align: center;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    
+    .benefits-title {
+        color: #000;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 122%;
+    }
+    
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    
+    .benefit-icon-wrapper {
+        display: flex;
+        width: 39px;
+        height: 39px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 70.9px;
+        background: #002BC6;
+    }
+    
+    .closing {
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+    .register-btn {
+        border-radius: 45px;
+        background: #002BC6;
+        display: flex;
+        height: 48px;
+        padding: 10px 52px;
+        justify-content: center;
+        align-items: center;
+        color: #E4E8F7;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: lowercase;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        background: #E4E8F7;
+        display: flex;
+        padding: 12px 0 20px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+    
+    footer p {
+        color: #3F484F;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    
+    footer .social-icons a {
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    
+    footer .footer-links {
+        margin-top: 10px;
+        text-align: center;
+        color: #002BC6;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 20px;
+        text-decoration: underline;
+    }
+    
+    footer .footer-links a {
+        color: #0047cc;
+        text-decoration: underline;
+    }
+    
+    footer .footer-link-row {
+        display: inline-block;
+    }
+    
+    footer .footer-link-row a {
+        margin: 0 4px;
+    }
+    
+    footer .separator {
+        color: #0047cc;
+        margin: 0 2px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .email-container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .subheader {
+            margin-bottom: 0px !important;
+            padding: 16px;
+            box-sizing: border-box;
+        }    
+        
+        .webinar-info {
+            flex-direction: column;
+            align-self: auto;
+            gap: 16px;
+        }
+
+        .intro-section {
+            padding: 16px;
+        }
+
+        .benefits-title {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .benefits {
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .benefit {
+            align-items: center;
+        }
+
+        .closing {
+            padding: 16px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="email-container">
+      
+      <!-- Logo -->
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="132" height="47" viewBox="0 0 132 47" fill="none">
+          <path d="M30.661 15.2354L19.7864 46.2656H11.7712L0.89325 15.2354H8.90844L15.7498 34.8007L22.5912 15.2354H30.6576H30.661Z" fill="#002BC6"/>
+          <path d="M33.0118 15.2354H41.027V46.2656H33.0118V15.2354Z" fill="#002BC6"/>
+          <path d="M44.7054 40.6119L49.81 36.0771C49.81 36.0771 53.6384 39.8476 58.9 39.8476C61.9641 39.8476 63.9023 38.8785 63.9023 37.2987C63.9023 33.9855 45.1114 34.4461 45.1114 24.1516C45.1114 18.6477 49.5541 14.7238 57.774 14.7238C66.7105 14.7238 71.8151 20.8895 71.8151 20.8895L66.7105 25.4243C66.7105 25.4243 62.8308 21.6539 57.5181 21.6539C54.5051 21.6539 52.5158 22.6741 52.5158 24.2028C52.5158 27.516 71.3578 27.0553 71.3578 37.3499C71.3578 42.8537 66.8128 46.7777 58.5929 46.7777C49.8612 46.7777 44.7054 40.6119 44.7054 40.6119Z" fill="#002BC6"/>
+          <path d="M108.684 30.7266C108.684 39.5402 101.484 46.7263 92.4965 46.7263C89.2276 46.7263 86.2147 45.8084 83.7136 44.1262V46.2144H75.6984V0L83.7136 0V17.3236C86.2147 15.6414 89.2276 14.7235 92.4965 14.7235C101.484 14.7235 108.684 21.9095 108.684 30.7232V30.7266ZM100.413 30.7266C100.413 25.7824 96.9391 22.1655 92.244 22.1655C87.5488 22.1655 84.0752 25.7824 84.0752 30.7266C84.0752 35.6708 87.4465 39.2877 92.244 39.2877C97.0415 39.2877 100.413 35.722 100.413 30.7266Z" fill="#002BC6"/>
+          <path d="M112.209 0L120.224 0V46.269H112.209V0Z" fill="#002BC6"/>
+          <path d="M131.107 19.6C131.107 21.1011 129.952 22.2558 128.393 22.2558C126.892 22.2558 125.679 21.1011 125.679 19.6C125.679 18.1567 126.892 17.002 128.393 17.002C129.894 16.9442 131.107 18.1567 131.107 19.6ZM126.372 19.6C126.372 20.7547 127.238 21.6785 128.393 21.6785C129.548 21.6785 130.414 20.7547 130.414 19.6C130.414 18.4453 129.548 17.4639 128.393 17.4639C127.238 17.4639 126.372 18.4453 126.372 19.6ZM127.989 20.9856H127.354V18.3876C127.585 18.3299 127.931 18.3299 128.335 18.3299C128.855 18.3299 129.028 18.3876 129.259 18.5031C129.375 18.6185 129.49 18.8495 129.49 19.0804C129.49 19.3691 129.259 19.6 128.97 19.7155V19.7732C129.201 19.8887 129.375 20.0619 129.432 20.4083C129.49 20.8124 129.548 20.9856 129.606 21.0434H129.028C128.97 20.9279 128.913 20.697 128.797 20.4083C128.739 20.1196 128.566 20.0042 128.278 20.0042H127.989V20.9856ZM127.989 19.4846H128.278C128.624 19.4846 128.913 19.3691 128.913 19.0804C128.913 18.8495 128.739 18.6763 128.335 18.6763C128.162 18.6763 128.047 18.6763 127.989 18.734V19.4846Z" fill="#002BC6"/>
+        </svg>
+      </div>
+  
+       <div class="subheader">
+          <h2 class="headline">
+            Tired of buying leads that go nowhere?
+          </h2>
+          <p class="subtext">
+            Discover how to win new customers directly without chasing dead-end lists.
+          </p>
+          <h3 class="hero-text">
+            UPCOMING WEBINAR
+          </h3>
+        </div>
+      
+  
+      <!-- Upcoming Webinar Section -->
+      <div class="webinar-card">      
+        <p>Join the exclusive webinar designed for forward-thinking brokers and loan originators with 
+          <strong>Abe Lee, CEO & Founder of VISBL.</strong>
+        </p>
+        <div class="webinar-info">
+          <span class="webinar-info-date">
+            <div class="webinar-info-date-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(4,4)">
+                  <path d="M16 2.27765V6.27765" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 2.27765V6.27765" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 9.27765H21" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19 4.27765H5C3.895 4.27765 3 5.17265 3 6.27765V19.2776C3 20.3826 3.895 21.2776 5 21.2776H19C20.105 21.2776 21 20.3826 21 19.2776V6.27765C21 5.17265 20.105 4.27765 19 4.27765Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 9.27765V21.2776" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15 9.27765V21.2776" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 15.2776H21" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </div>
+              Sep 25, 2025
+          </span>
+          <span class="webinar-info-time">     
+            <div class="webinar-info-time-icon-wrapper">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.2776V21.2776C16.971 21.2776 21 17.2486 21 12.2776V12.2776C21 7.30665 16.971 3.27765 12 3.27765V3.27765C7.029 3.27765 3 7.30665 3 12.2776V12.2776C3 17.2486 7.029 21.2776 12 21.2776Z" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 14.2776L12 12.2776V9.27765" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.5 12.2776H6" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.5 12.2776H18" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.76002 16.5177L7.40002 16.8777" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.24 8.03764L16.6 7.67764" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 18.2776V18.7776" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 5.77765V6.27765" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.24 16.5177L16.6 16.8777" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.40002 7.67764L7.76002 8.03764" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+    
+            11:00 AM PST
+          </span>
+        </div>
+        <a href="#" class="webinar-info-btn">register now</a>
+      </div>
+  
+      <!-- Intro Section -->
+      <div class="intro-section">
+      <p style="margin-bottom: 16px;">
+        <strong>
+          Visbl is introducing a first-of-its-kind,
+        </strong> proprietary technology that empowers mortgage professionals to connect with today’s digital-first borrower—without the costly middlemen.
+      </p>
+  
+      <p>
+        Instead of competing over recycled leads, you’ll see how a consumer-direct approach opens new doors to qualified
+        mortgage customers who are ready to engage.
+      </p>
+      </div>    
+  
+      <!-- Benefits Section -->
+      <h3 class="benefits-title">
+        You’ll learn how a consumer-direct approach helps you:
+      </h3>
+      <div class="benefits">
+        <div class="benefit">
+          <span class="icon">
+            <div class="benefit-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <path d="M19.5 19.2776L13.5 13.2776M10.5 5.27765H8C7.60218 5.27765 7.22064 5.43568 6.93934 5.71699C6.65804 5.99829 6.5 6.37982 6.5 6.77765C6.5 7.17547 6.65804 7.557 6.93934 7.83831C7.22064 8.11961 7.60218 8.27765 8 8.27765H9C9.39782 8.27765 9.77936 8.43568 10.0607 8.71699C10.342 8.99829 10.5 9.37982 10.5 9.77765C10.5 10.1755 10.342 10.557 10.0607 10.8383C9.77936 11.1196 9.39782 11.2776 9 11.2776H6.5M8.5 11.2776V12.2776M8.5 4.27765V5.27765M1.5 8.27765C1.5 9.1969 1.68106 10.1072 2.03284 10.9564C2.38463 11.8057 2.90024 12.5774 3.55025 13.2274C4.20026 13.8774 4.97194 14.393 5.82122 14.7448C6.6705 15.0966 7.58075 15.2776 8.5 15.2776C9.41925 15.2776 10.3295 15.0966 11.1788 14.7448C12.0281 14.393 12.7997 13.8774 13.4497 13.2274C14.0998 12.5774 14.6154 11.8057 14.9672 10.9564C15.3189 10.1072 15.5 9.1969 15.5 8.27765C15.5 7.3584 15.3189 6.44814 14.9672 5.59887C14.6154 4.74959 14.0998 3.97791 13.4497 3.3279C12.7997 2.67789 12.0281 2.16227 11.1788 1.81049C10.3295 1.45871 9.41925 1.27765 8.5 1.27765C7.58075 1.27765 6.6705 1.45871 5.82122 1.81049C4.97194 2.16227 4.20026 2.67789 3.55025 3.3279C2.90024 3.97791 2.38463 4.74959 2.03284 5.59887C1.68106 6.44814 1.5 7.3584 1.5 8.27765Z" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </span>
+          <p><strong>Deliver transparent offers</strong><br>in US dollars vs. APR</p>
+        </div>
+        <div class="benefit">
+          <span class="icon">
+            <div class="benefit-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M16.0915 14.6616L16.3576 14.2615C17.479 12.5803 19.5867 11.8575 21.5037 12.4967" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5642 13.071L11.7647 7.08448L13.0752 7.73976C13.5619 7.9827 14.1532 7.82684 14.4568 7.3756L15.6013 5.65789C15.887 5.22857 15.8305 4.65736 15.4662 4.29232L14.0256 2.85172C13.3577 2.18361 12.2905 2.13502 11.5646 2.73967C8.15606 5.57986 5.60692 9.31418 4.20355 13.5232L3.6033 15.3099C3.30389 16.2125 3.62858 17.2049 4.40364 17.7559L5.93528 18.8504C8.89104 20.9622 12.7188 21.4233 16.0915 20.0739L17.174 22.2388" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.0915 13.5782C14.125 12.2676 11.5633 12.2676 9.5968 13.5782" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </span>
+          <p><strong>Compete head-to-head</strong><br>with the biggest lenders</p>
+        </div>
+        <div class="benefit">
+          <span class="icon">
+            <div class="benefit-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M19.9998 12.8496L12.4998 20.2776L4.99981 12.8496C4.50512 12.3683 4.11546 11.7897 3.85536 11.1503C3.59527 10.5109 3.47037 9.82459 3.48855 9.13458C3.50673 8.44456 3.66758 7.76578 3.96097 7.14098C4.25436 6.51618 4.67395 5.9589 5.1933 5.50422C5.71265 5.04955 6.32052 4.70733 6.97862 4.49912C7.63673 4.29092 8.33082 4.22123 9.01718 4.29444C9.70354 4.36766 10.3673 4.5822 10.9667 4.92455C11.5661 5.2669 12.0881 5.72964 12.4998 6.28364C12.9133 5.73366 13.4359 5.27496 14.0349 4.93625C14.6339 4.59753 15.2963 4.38609 15.9807 4.31516C16.6652 4.24423 17.3569 4.31534 18.0126 4.52403C18.6683 4.73273 19.2738 5.07452 19.7914 5.52801C20.3089 5.9815 20.7272 6.53693 21.0202 7.15953C21.3132 7.78214 21.4746 8.45853 21.4941 9.14635C21.5137 9.83418 21.3911 10.5186 21.1339 11.1569C20.8768 11.7952 20.4907 12.3735 19.9998 12.8556M12.4998 6.27765L9.20685 9.57065C9.01938 9.75818 8.91406 10.0125 8.91406 10.2776C8.91406 10.5428 9.01938 10.7971 9.20685 10.9846L9.74985 11.5276C10.4398 12.2176 11.5598 12.2176 12.2498 11.5276L13.2498 10.5276C13.8466 9.93092 14.6559 9.59568 15.4998 9.59568C16.3438 9.59568 17.1531 9.93092 17.7498 10.5276L19.9998 12.7776M13 15.7776L15 17.7776M15.5 13.2776L17.5 15.2776" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </span>
+          <p><strong>Build trust and close faster</strong><br>with today’s digital-first borrower</p>
+        </div>
+        <div class="benefit">
+          <span class="icon">
+            <div class="benefit-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M17.174 17.2776L16.89 16.5646C16.746 16.2036 16.523 15.8786 16.238 15.6146V15.6146C15.755 15.1666 15.12 14.9186 14.462 14.9186H10.538C9.87899 14.9186 9.24499 15.1676 8.76199 15.6146V15.6146C8.47699 15.8786 8.25399 16.2036 8.10999 16.5646L7.82599 17.2776" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.4445 8.0831C15.5184 9.15704 15.5184 10.8983 14.4445 11.9722C13.3705 13.0461 11.6293 13.0461 10.5554 11.9722C9.48145 10.8983 9.48145 9.15704 10.5554 8.0831C11.6293 7.00916 13.3705 7.00916 14.4445 8.0831" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.088 3.27765H5.5C4.395 3.27765 3.5 4.17265 3.5 5.27765V7.86565" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.912 21.2776H19.5C20.605 21.2776 21.5 20.3826 21.5 19.2776V16.6896" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 16.6896V19.2776C3.5 20.3826 4.395 21.2776 5.5 21.2776H8.088" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.5 7.86565V5.27765C21.5 4.17265 20.605 3.27765 19.5 3.27765H16.912" stroke="#E4E8F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </span>
+          <p><strong>Reach customers earlier</strong><br>in their decision-making process</p>
+        </div>
+      </div>
+  
+      <!-- Closing Section -->
+      <p class="closing">
+        Don’t miss this opportunity to see how mortgage professionals nationwide are transforming customer acquisition with VISBL.
+      </p>
+      <a href="#" class="register-btn">register now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <p>© 2025 VISBL. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/people/Visbl/61563372264589/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="none">
+        <circle cx="23" cy="23.7777" r="23" fill="white"/>
+        <path d="M18.3226 24.4297H20.5149V33.4551C20.5149 33.6333 20.6593 33.7777 20.8375 33.7777H24.5546C24.7328 33.7777 24.8772 33.6333 24.8772 33.4551V24.4722H27.3975C27.5614 24.4722 27.6992 24.3493 27.7179 24.1865L28.1007 20.8638C28.1112 20.7724 28.0823 20.6808 28.0211 20.6122C27.9599 20.5436 27.8723 20.5043 27.7803 20.5043H24.8774V18.4215C24.8774 17.7936 25.2154 17.4752 25.8823 17.4752C25.9773 17.4752 27.7803 17.4752 27.7803 17.4752C27.9585 17.4752 28.1029 17.3307 28.1029 17.1526V14.1027C28.1029 13.9245 27.9585 13.7801 27.7803 13.7801H25.1645C25.1461 13.7792 25.1051 13.7777 25.0447 13.7777C24.5908 13.7777 23.0132 13.8668 21.767 15.0133C20.3863 16.2837 20.5782 17.8049 20.6241 18.0686V20.5042H18.3226C18.1444 20.5042 18 20.6486 18 20.8268V24.1071C18 24.2853 18.1444 24.4297 18.3226 24.4297Z" fill="#002BC6"/>
+        </svg>
+        </a>
+        <a href="https://www.instagram.com/visblsearch" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="none">
+            <circle cx="23" cy="23.7777" r="23" fill="white"/>
+            <path d="M17.1799 15.7777H29.7985C30.9973 15.7777 31.9774 16.7581 31.9774 17.9569V30.5755C31.9774 31.774 30.9973 32.7537 29.7985 32.7537H17.1799C15.9811 32.7537 15 31.774 15 30.5755V17.9569C15 16.7581 15.9811 15.7777 17.1799 15.7777ZM27.3678 17.6632C26.9469 17.6632 26.6035 18.0079 26.6035 18.4286V20.2572C26.6035 20.6781 26.9469 21.022 27.3678 21.022H29.2864C29.7066 21.022 30.0507 20.6781 30.0507 20.2572V18.4286C30.0507 18.0079 29.7066 17.6632 29.2864 17.6632H27.3678ZM30.058 22.9566H28.5642C28.7059 23.4193 28.7827 23.9072 28.7827 24.4144C28.7827 27.2373 26.4191 29.5268 23.5046 29.5268C20.5909 29.5268 18.2273 27.2373 18.2273 24.4144C18.2273 23.9072 18.3048 23.4193 18.4458 22.9566H16.8873V30.1286C16.8873 30.5 17.1906 30.8021 17.5617 30.8021H29.384C29.7554 30.8021 30.058 30.5 30.058 30.1286V22.9566ZM23.5047 20.9256C21.6225 20.9256 20.0956 22.4042 20.0956 24.2298C20.0956 26.0536 21.6225 27.5334 23.5047 27.5334C25.3879 27.5334 26.9148 26.0536 26.9148 24.2298C26.9148 22.4041 25.3879 20.9256 23.5047 20.9256Z" fill="#002BC6"/>
+        </svg>
+        </a>
+        <a href="https://x.com/visblsearch" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="none">
+            <g clip-path="url(#clip0_8_2102)">
+            <path d="M23 46.7777C35.7025 46.7777 46 36.4803 46 23.7777C46 11.0752 35.7025 0.77771 23 0.77771C10.2975 0.77771 0 11.0752 0 23.7777C0 36.4803 10.2975 46.7777 23 46.7777Z" fill="white"/>
+            <path d="M18.1102 15.2997H15.4002L27.8746 32.7594H30.5847L18.1102 15.2997ZM13 14H18.9555L24.119 21.3531L30.5838 14H32.3482L24.9025 22.4688L33 34H27.0445L21.5915 26.2347L14.7644 34H13L20.8081 25.119L13 14Z" fill="#002BC6"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_8_2102">
+                <rect width="46" height="46" fill="white" transform="translate(0 0.77771)"/>
+            </clipPath>
+            </defs>
+        </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/89599705/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="47" viewBox="0 0 46 47" fill="none">
+            <circle cx="23" cy="23.7777" r="23" fill="white"/>
+            <path d="M16.9352 15.7777C15.8677 15.7777 15.0036 16.6433 15.0034 17.7085C15.0034 18.7746 15.8675 19.6401 16.9354 19.6401C18.0003 19.6401 18.8656 18.7746 18.8656 17.7085C18.8656 16.6432 18.0002 15.7777 16.9352 15.7777Z" fill="#002BC6"/>
+            <path d="M18.6001 21.1052H15.269V31.8227H18.6001V21.1052Z" fill="#002BC6"/>
+            <path d="M27.0803 20.8387C25.4599 20.8387 24.3734 21.7271 23.9287 22.5696H23.8841V21.1052H20.6893H20.6891V31.8225H24.0173V26.5206C24.0173 25.1228 24.2834 23.7689 26.0164 23.7689C27.7245 23.7689 27.7473 25.3675 27.7473 26.6102V31.8223H31.076V25.9439C31.076 23.0584 30.4534 20.8387 27.0803 20.8387Z" fill="#002BC6"/>
+        </svg>
+        </a>
+    </div>
+    <div class="footer-links">
+        <span class="footer-link-row">
+        <a href="#">Unsubscribe</a>
+        <span class="separator">|</span>
+        <a href="mailto:getvisbl@visbl.com">Contact Us</a>
+        </span>
+        <br>
+        <a href="#">View in browser</a>
+    </div>
+    </footer>
+</body>
+</html>
