@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VISBL Webinar Invitation</title>
+
+  <style type="text/css">
+	:root {
+		color-scheme: light dark;
+		supported-color-schemes: light dark;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.light-bg {
+			background-color: #FFFFFF !important;
+		}
+	}
+</style>
+<style type="text/css">
+	/* RESET STYLES */
+
+	html {
+		margin: 0;
+		padding: 0;
+		background-color: #222222;
+	}
+
+	body,
+	#bodyTable,
+	#bodyCell {
+		height: 100% !important;
+		margin: 0;
+		padding: 0;
+		width: 100% !important;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	table[id=bodyTable] {
+		width: 100% !important;
+		margin: auto;
+		max-width: 600px !important;
+		font-weight: normal;
+	}
+
+	/* Force Hotmail/Outlook.com to display line heights normally. */
+	table,
+	td {
+		mso-table-lspace: 0pt;
+		mso-table-rspace: 0pt;
+	}
+
+	/* Force Outlook 2007 and up to provide a "view in browser" message. */
+	img {
+		-ms-interpolation-mode: bicubic;
+		outline: none;
+		text-decoration: none;
+	}
+
+	/* Force IE to smoothly render resized images. */
+	body,
+	table,
+	td,
+	p,
+	a,
+	li,
+	blockquote {
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+		font-weight: normal !important;
+	}
+
+	body,
+	#bodyTable {
+		background-color: #FFFFFF;
+	}
+
+	#emailBody {
+		background-color: #FFFFFF;
+	}
+
+	.hidden-lg {
+		display: none !important;
+		mso-hide: all !important;
+	}
+
+
+	/*//// MOBILE STYLES /////*/
+
+	@media only screen and (max-width: 600px) {
+
+		/*////// CLIENT-SPECIFIC STYLES //////*/
+		body {
+			width: 100% !important;
+			min-width: 100% !important;
+		}
+
+		table[id="emailBody"] {
+			width: 100% !important;
+		}
+
+		/* Create top space for every second element in a block */
+		.hidden {
+			display: none;
+		}
+
+		.hidden-sm {
+			display: none !important;
+		}
+
+		.hidden-lg {
+			display: table !important;
+			overflow: visible !important;
+			max-height: inherit !important;
+		}
+
+		.hidden-lg-inline {
+			display: inline-block !important;
+			overflow: visible !important;
+			max-height: inherit !important;
+		}
+
+		.textbody {
+			font-size: 15px !important;
+			line-height: 20px !important;
+		}
+
+		.textbody #personalizacion {
+			font-size: 18px !important;
+		}
+
+		/* [INICIO] ESTILOS PREESTABLECIDOS */
+		/* TEXT ALIGN */
+
+		.text-center {
+			text-align: center !important;
+		}
+
+		.text-left {
+			text-align: left !important;
+		}
+
+		/* IMAGE ALIGN */
+
+		.height-auto {
+			height: auto !important;
+		}
+		/* PADDING STYLES */
+
+		.pv-5 {
+			padding-top: 5% !important;
+			padding-bottom: 5% !important;
+		}
+
+		.pv-10 {
+			padding-top: 10% !important;
+			padding-bottom: 10% !important;
+		}
+
+		.pt-5 {
+			padding-top: 5% !important;
+		}
+
+		.pt-10 {
+			padding-top: 10% !important;
+		}
+
+
+		.pb-5 {
+			padding-bottom: 5% !important;
+		}
+
+		.pb-10 {
+			padding-bottom: 10% !important;
+		}
+
+		.ph-5 {
+			padding-right: 5% !important;
+			padding-left: 5% !important;
+		}
+
+		.ph-10 {
+			padding-right: 10% !important;
+			padding-left: 10% !important;
+		}
+
+		.pl-5 {
+			padding-left: 5% !important;
+		}
+
+		.pr-5 {
+			padding-right: 5% !important;
+		}
+
+		.mt-0 {
+			margin-top: 0% !important;
+		}
+
+		.mt-5 {
+			margin-top: 5% !important;
+		}
+
+		.mt-10 {
+			margin-top: 10% !important;
+		}
+
+		.mb-0 {
+			margin-bottom: 0% !important;
+		}
+
+		.mb-5 {
+			margin-bottom: 5% !important;
+		}
+
+		.mb-10 {
+			margin-bottom: 10% !important;
+		}
+
+		/* WIDTH STYLES */
+	
+		.col-sm-1 {
+			width: 8.33333333% !important;
+		}
+
+		.col-sm-2 {
+			width: 16.66666667% !important;
+		}
+
+		.col-sm-3 {
+			width: 25% !important;
+		}
+
+		.col-sm-4 {
+			width: 33.33333333% !important;
+		}
+
+
+		.col-sm-6 {
+			width: 50% !important;
+		}
+
+		
+		.col-sm-8 {
+			width: 66.66666667% !important;
+		}
+
+
+		.col-sm-10 {
+			width: 83.333333% !important;
+		}
+
+
+		.col-sm-12 {
+			width: 100% !important;
+		}
+
+
+		/* [FIN] ESTILOS ESPECIFICOS */
+	}
+
+	@media only screen and (max-width: 400px) {
+
+		.textmb{
+			font-size: 25px !important;
+		}
+		.textmb2{
+			font-size: 25px !important;
+		}
+		.textmb3{
+			font-size: 15px !important;
+		}
+
+	}
+</style>
+</head>
+<body style="display: block; width:600; max-width:600px; margin: 0 auto; padding:0; background: #FFFFFF; ">
+  <center style="background-color:#FFFFFF;">
+    <!-- ================= HEADER ================= -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" align="center"
+      style="background-color:#f9faff;">
+      <tr>
+        <td align="center" valign="top">
+          <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+            style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+              bgcolor="#ffffff">
+								<tbody>
+                  <tr>
+										<td class="col-sm-12 text-center pt-10 pb-0" style="text-align:center; width: 600px; padding: 40px 0 20px 0; color: #FFFFFF; font-size: 15px; font-family: Montserrat, sans-serif;">
+											<div>																			
+											<center>
+                          <a href="https://visbl.com/" target="_blank">
+                              <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/visbl_logo.png">
+                          </a>
+                      </center>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+              </table>
+              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;" bgcolor="#ffffff">
+								<tbody>
+									<tr>
+										
+                    <td class="col-sm-10 block-auto"
+                      style=" text-align:left; width: 500px; color: #222222; font-size: 24px; font-family: Montserrat, sans-serif; padding: 40px 50px;padding-bottom:16px;">
+											<div>
+                        <span style="color: #002BC6; font-size: 28px; font-weight: 700;line-height: 122%;font-style: normal;font-family: Montserrat, sans-serif;">The future of mortgage customers 
+                            <br>- without buying leads </span>
+												<br><br>
+                        <span style="font-weight: 400;font-size:18px;line-height: 122%;font-style:normal;font-family: Montserrat, sans-serif;color: #000000;">Still paying for recycled leads? It's time for something<br>
+                             different.
+                        </span>
+												
+											</div>
+										</td>
+									</tr>
+								</tbody>
+              </table>              
+              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" 
+                style="max-width:600px; background-color: #ffffff;border-bottom:1px solid #A8ADBF;margin-bottom:24px;"
+                bgcolor="#ffffff">
+								<tbody>
+									<tr>
+                  <td class="col-sm-10 block-auto"
+                    style=" text-align:center; width: 500px; color: #222222; font-size: 24px; font-family: Montserrat, sans-serif; padding: 8px 50px;padding-top:0px;">
+                    <span
+                      style="color:#002BC6; font-family: Montserrat, sans-serif; font-size: 16px; font-style: normal; font-weight: 700; line-height: 30px; text-transform: uppercase;">
+                      Upcoming Webinar
+                    </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="background:#002BC6; padding:24px; max-width:600px; min-width:600px; margin-left:40px;margin-right:40px;margin-bottom:40px;">
+                <!-- Texto -->
+                <tr>
+                  <td align="center" style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:18px; padding-bottom:16px;font-style: normal;font-weight: 400;line-height: 30px; padding: 16px;">
+                    Join <strong style="font-weight:600;">Abe Lee, CEO & Founder of VISBL</strong>, for a free <br class="hidden-sm">
+                    webinar introducing patented technology that gives <br class="hidden-sm">
+                    brokers and loan originators direct access to qualified <br class="hidden-sm">
+                    mortgage customers no middlemen required.
+                  </td>
+                </tr>
+
+                <!-- Fecha + Hora -->
+                <tr>
+                  <td align="center">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
+                      <tr>
+                        <!-- Fecha -->
+                        <td style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:16px; line-height:30px; padding:10px;">
+                          <span style="display:inline-block; background:#E4E8F7; border-radius:50%; width:39px; height:39px; text-align:center; line-height:35px;">
+                            <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/calendar_schedule.png" alt="Calendar"
+                              width="27" height="27"
+                              style="vertical-align:middle;" />
+                          </span>
+                          Sep 25, 2025
+                        </td>
+                        <!-- Hora -->
+                        <td style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:16px; line-height:30px; padding:10px;">
+                          <span style="display:inline-block; background:#E4E8F7; border-radius:50%; width:39px; height:39px; text-align:center; line-height:35px;">
+                            <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/clock_time_circle.png" alt="Clock" width="30"
+                              height="30"
+                              style="vertical-align:middle;" />
+                          </span>
+                          11:00 AM PST
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Botón -->
+                <tr>
+                  <td align="center" style="padding:20px;">
+                    <a href="#" style="display:inline-block; background:#FFFFFF; color:#002BC6; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 100%;box-sizing: border-box;line-height: 17.46px;text-transform: lowercase;">
+                      register now
+                    </a>
+                  </td>
+                </tr>
+
+              </table>
+
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width:600px; margin:0 auto; padding:16px;">
+            
+            <!-- Párrafo 1 -->
+            <tr>
+              <td align="left"
+                style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding-bottom:16px;font-style: normal;font-weight: 400;">
+                Instead of competing over recylcled leads, you’ll see how a
+                 consumer-direct approach opens new doors to qualified
+                 mortgage customers who are ready to engage.
+              </td>
+            </tr>
+          </table>
+
+          <!-- ================= BENEFITS ================= -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" align="center"
+        style="background:#ffffff;">
+        <tr>
+          <td align="center">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" 
+              style="max-width:600px; margin-left:24px;margin-right:24px;">
+
+              <!-- Título -->
+              <tr>
+                <td align="left"
+                  style="font-family:Montserrat, sans-serif; font-size:28px; font-weight:500 !important; color:#000000;line-height: 122%;font-style: normal;">
+                  Discover how a consumer-direct approach helps you:
+                </td>
+              </tr>
+
+              <!-- Cuatro beneficios en 2x2 -->
+              <tr>
+                <td align="center" style="padding:16px;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="50%" valign="top" align="left" style="padding:12px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td align="left" style="padding-bottom:8px;">
+                              <span style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+                                <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/magnifying_glass.png" alt="Icon 1" width="18"
+                                  height="18" style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;" />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="font-family:Montserrat, sans-serif;color:black;font-weight:400 !important;font-size: 18px; font-style: normal; line-height: 30px;">
+                              <strong
+                                style="color: #000;font-family: Montserrat, sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: 30px;">
+                                Deliver transparent offers</strong>
+                              <br>in US dollars vs. APR
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="50%" valign="top" align="left" style="padding:12px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td align="left" style="padding-bottom:8px;">
+                              <span style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+                                <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/fitness-biceps.png" alt="Icon 1" width="18"
+                                  height="18" style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;" />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left"
+                              style="font-family:Montserrat, sans-serif;color:black;font: weight 400px !important;;font-size: 18px; font-style: normal; line-height: 30px;">
+                              <strong
+                                style="color: #000;font-family: Montserrat, sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: 30px;">
+                                Compete head-to-head
+                              </strong>
+                              <br>with the biggest lenders
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="50%" valign="top" align="left" style="padding:12px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td align="left" style="padding-bottom:8px;">
+                              <span style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+                                <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/tabler-icon-heart-handshake.png" alt="Icon 1"
+                                  width="18"
+                                  height="18" style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;" />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left"
+                              style="font-family:Montserrat, sans-serif;color:black;font-weight:400 !important;font-size: 18px; font-style: normal; line-height: 30px;">
+                              <strong style="color: #000;font-family: Montserrat, sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: 30px;">
+                                Build trust and close faster
+                              </strong>
+                              <br>with today’s digital-first borrower
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="50%" valign="top" align="left" style="padding:12px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td align="left" style="padding-bottom:8px;">
+                              <span style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+                                <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/user_single_select.png" alt="Icon 1"
+                                  width="18" height="18"
+                                  style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;" />
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left"
+                              style="font-family:Montserrat, sans-serif;color:black;font-weight:400 !important;font-size: 18px; font-style: normal; line-height: 30px;">
+                              <strong
+                                style="color: #000;font-family: Montserrat, sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: 30px;">
+                                Reach customers earlier</strong>
+                              <br>in their decision-making process
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+      </table>
+
+          <!-- ================= CLOSING ================= -->
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
+            <tr>
+              <td align="center" style="font-family:Montserrat, sans-serif; font-size:18px; font-weight: 400;font-style: normal; line-height:30px; color:#000000; padding:16px;">
+                <strong
+                    style="font-family:Montserrat, sans-serif; font-size:18px; font-weight: 700;font-style: normal; line-height:30px; color:#000000;">
+                    Save  your spot
+                    now</strong><br class="hidden-sm">
+                This is one session you don’t want to miss.
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" style="padding:16px;padding-bottom: 40px;">
+                <a href="#"
+                  style="display:inline-block; background:#002BC6; color:#E4E8F7; font-size:16px; font-weight:600!important; line-height: 17.46px; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
+                  register now
+                </a>
+              </td>
+            </tr>
+
+          </table>
+
+
+
+          <!-- ================= FOOTER ================= -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+              style="max-width:600px; min-width: 100%!important; margin:0 auto; table-layout:fixed;background-color:#E4E8F7;padding-bottom:20px;" bgcolor="#E4E8F7">
+
+            <!-- Copyright -->
+            <tr>
+              <td align="center"
+                style="font-family:Montserrat, sans-serif; font-size:11px; line-height:20px; color:#3F484F; padding-bottom:12px;padding-top:20px;">
+                © 2025 VISBL. All rights reserved.
+              </td>
+            </tr>
+
+            <!-- Social Icons -->
+            <tr>
+              <td align="center" style="padding-bottom:12px;">
+                
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/people/Visbl/61563372264589/" target="_blank" style="margin:0 5px;text-decoration:none;">
+                  <span style="display:inline-block; background:#fff; border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center;">
+                    <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/facebook-1.png" alt="Facebook"
+                      style="width:10px; height:20px; vertical-align:middle;" />
+                  </span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/visblsearch" target="_blank" style="margin:0 5px;text-decoration:none;">
+                  <span style="display:inline-block; background:#fff; border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center;">
+                    <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/instagram-1.png" alt="Instagram"
+                      style="width:40px; height:40px; vertical-align:middle;" />
+                  </span>
+                </a>
+
+                <!-- X (Twitter) -->
+                <a href="https://x.com/visblsearch" target="_blank" style="margin:0 5px;text-decoration:none;">
+                  <span style="display:inline-block; background:#fff; border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center;">
+                    <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/twitter-1.png" alt="X"
+                      style="width:40px; height:40px; vertical-align:middle;" />
+                  </span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/89599705/" target="_blank" style="margin:0 5px;text-decoration:none;">
+                  <span style="display:inline-block; background:#fff; border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center;">
+                    <img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/linkedin-1.png" alt="LinkedIn"
+                      style="width:20px; height:20px; vertical-align:middle;" />
+                  </span>
+                </a>
+
+              </td>
+            </tr>
+
+            <!-- Links -->
+            <tr>
+              <td align="center" style="font-family:Montserrat, sans-serif; font-size:11px; line-height:20px; color:#002BC6;padding-bottom: 20px;">
+                <a href="#" style="color:#002BC6; text-decoration:underline; margin:0 4px;">Unsubscribe</a> | 
+                <a href="mailto:getvisbl@visbl.com" style="color:#002BC6; text-decoration:underline; margin:0 4px;">Contact Us</a>
+                <br/>
+                <a href="#" style="color:#002BC6; text-decoration:underline;">View in browser</a>
+              </td>
+            </tr>
+
+          </table>
+
+        </td>
+      </tr>
+    </table>
+    
+  
+  </center>
+</body>
+</html>
