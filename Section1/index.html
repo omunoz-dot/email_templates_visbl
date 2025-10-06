@@ -1,640 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <title>VISBL Email Template</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<title>VISBL Email Template</title>
 
-  <style type="text/css">
-	:root {
-		color-scheme: light dark;
-		supported-color-schemes: light dark;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.light-bg {
-			background-color: #FFFFFF !important;
-		}
-	}
-</style>
-<style type="text/css">
-	/* RESET STYLES */
-
-	html {
-		margin: 0;
-		padding: 0;
-		background-color: #222222;
-	}
-
-	body,
-	#bodyTable,
-	#bodyCell {
-		height: 100% !important;
-		margin: 0;
-		padding: 0;
-		width: 100% !important;
-	}
-
-	table {
-		border-collapse: collapse;
-	}
-
-	table[id=bodyTable] {
-		width: 100% !important;
-		margin: auto;
-		max-width: 600px !important;
-		font-weight: normal;
-	}
-
-	/* Force Hotmail/Outlook.com to display line heights normally. */
-	table,
-	td {
-		mso-table-lspace: 0pt;
-		mso-table-rspace: 0pt;
-	}
-
-	/* Force Outlook 2007 and up to provide a "view in browser" message. */
-	img {
-		-ms-interpolation-mode: bicubic;
-		outline: none;
-		text-decoration: none;
-	}
-
-	/* Force IE to smoothly render resized images. */
-	body,
-	table,
-	td,
-	p,
-	a,
-	li,
-	blockquote {
-		-ms-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%;
-		font-weight: normal !important;
-	}
-
-	body,
-	#bodyTable {
-		background-color: #FFFFFF;
-	}
-
-	#emailBody {
-		background-color: #FFFFFF;
-	}
-
-	.hidden-lg {
-		display: none !important;
-		mso-hide: all !important;
-	}
-
-
-	/*//// MOBILE STYLES /////*/
-
-	@media only screen and (max-width: 600px) {
-
-		/*////// CLIENT-SPECIFIC STYLES //////*/
-		body {
-			width: 100% !important;
-			min-width: 100% !important;
+	<style type="text/css">
+		:root {
+			color-scheme: light dark;
+			supported-color-schemes: light dark;
 		}
 
-		table[id="emailBody"] {
+		@media (prefers-color-scheme: dark) {
+			.light-bg {
+				background-color: #FFFFFF !important;
+			}
+		}
+	</style>
+	<style type="text/css">
+		/* RESET STYLES */
+
+		html {
+			margin: 0;
+			padding: 0;
+			background-color: #222222;
+		}
+
+		body,
+		#bodyTable,
+		#bodyCell {
+			height: 100% !important;
+			margin: 0;
+			padding: 0;
 			width: 100% !important;
 		}
 
-		/* Create top space for every second element in a block */
-		.hidden {
-			display: none;
+		table {
+			border-collapse: collapse;
 		}
 
-		.hidden-sm {
-			display: none !important;
+		table[id=bodyTable] {
+			width: 100% !important;
+			margin: auto;
+			max-width: 600px !important;
+			font-weight: normal;
+		}
+
+		/* Force Hotmail/Outlook.com to display line heights normally. */
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		/* Force Outlook 2007 and up to provide a "view in browser" message. */
+		img {
+			-ms-interpolation-mode: bicubic;
+			outline: none;
+			text-decoration: none;
+		}
+
+		/* Force IE to smoothly render resized images. */
+		body,
+		table,
+		td,
+		p,
+		a,
+		li,
+		blockquote {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			font-weight: normal !important;
+		}
+
+		body,
+		#bodyTable {
+			background-color: #FFFFFF;
+		}
+
+		#emailBody {
+			background-color: #FFFFFF;
 		}
 
 		.hidden-lg {
-			display: table !important;
-			overflow: visible !important;
-			max-height: inherit !important;
-		}
-
-		.hidden-lg-inline {
-			display: inline-block !important;
-			overflow: visible !important;
-			max-height: inherit !important;
-		}
-
-		.textbody {
-			font-size: 15px !important;
-			line-height: 20px !important;
-		}
-
-		.textbody #personalizacion {
-			font-size: 18px !important;
-		}
-
-		/* [INICIO] ESTILOS PREESTABLECIDOS */
-		/* TEXT ALIGN */
-
-		.text-center {
-			text-align: center !important;
-		}
-
-		.text-left {
-			text-align: left !important;
-		}
-
-		/* IMAGE ALIGN */
-
-		.height-auto {
-			height: auto !important;
-		}
-		/* PADDING STYLES */
-
-		.pv-5 {
-			padding-top: 5% !important;
-			padding-bottom: 5% !important;
-		}
-
-		.pv-10 {
-			padding-top: 10% !important;
-			padding-bottom: 10% !important;
-		}
-
-		.pt-5 {
-			padding-top: 5% !important;
-		}
-
-		.pt-10 {
-			padding-top: 10% !important;
+			display: none !important;
+			mso-hide: all !important;
 		}
 
 
-		.pb-5 {
-			padding-bottom: 5% !important;
+		/*//// MOBILE STYLES /////*/
+
+		@media only screen and (max-width: 600px) {
+
+			/*////// CLIENT-SPECIFIC STYLES //////*/
+			body {
+				width: 100% !important;
+				min-width: 100% !important;
+			}
+
+			table[id="emailBody"] {
+				width: 100% !important;
+			}
+
+			/* Create top space for every second element in a block */
+			.hidden {
+				display: none;
+			}
+
+			.hidden-sm {
+				display: none !important;
+			}
+
+			.hidden-lg {
+				display: table !important;
+				overflow: visible !important;
+				max-height: inherit !important;
+			}
+
+			.hidden-lg-inline {
+				display: inline-block !important;
+				overflow: visible !important;
+				max-height: inherit !important;
+			}
+
+			.textbody {
+				font-size: 15px !important;
+				line-height: 20px !important;
+			}
+
+			.textbody #personalizacion {
+				font-size: 18px !important;
+			}
+
+			/* [INICIO] ESTILOS PREESTABLECIDOS */
+			/* TEXT ALIGN */
+
+			.text-center {
+				text-align: center !important;
+			}
+
+			.text-left {
+				text-align: left !important;
+			}
+
+			/* IMAGE ALIGN */
+
+			.height-auto {
+				height: auto !important;
+			}
+
+			/* PADDING STYLES */
+
+			.pv-5 {
+				padding-top: 5% !important;
+				padding-bottom: 5% !important;
+			}
+
+			.pv-10 {
+				padding-top: 10% !important;
+				padding-bottom: 10% !important;
+			}
+
+			.pt-5 {
+				padding-top: 5% !important;
+			}
+
+			.pt-10 {
+				padding-top: 10% !important;
+			}
+
+
+			.pb-5 {
+				padding-bottom: 5% !important;
+			}
+
+			.pb-10 {
+				padding-bottom: 10% !important;
+			}
+
+			.ph-5 {
+				padding-right: 5% !important;
+				padding-left: 5% !important;
+			}
+
+			.ph-10 {
+				padding-right: 10% !important;
+				padding-left: 10% !important;
+			}
+
+			.pl-5 {
+				padding-left: 5% !important;
+			}
+
+			.pr-5 {
+				padding-right: 5% !important;
+			}
+
+			.mt-0 {
+				margin-top: 0% !important;
+			}
+
+			.mt-5 {
+				margin-top: 5% !important;
+			}
+
+			.mt-10 {
+				margin-top: 10% !important;
+			}
+
+			.mb-0 {
+				margin-bottom: 0% !important;
+			}
+
+			.mb-5 {
+				margin-bottom: 5% !important;
+			}
+
+			.mb-10 {
+				margin-bottom: 10% !important;
+			}
+
+			/* WIDTH STYLES */
+
+			.col-sm-1 {
+				width: 8.33333333% !important;
+			}
+
+			.col-sm-2 {
+				width: 16.66666667% !important;
+			}
+
+			.col-sm-3 {
+				width: 25% !important;
+			}
+
+			.col-sm-4 {
+				width: 33.33333333% !important;
+			}
+
+
+			.col-sm-6 {
+				width: 50% !important;
+			}
+
+
+			.col-sm-8 {
+				width: 66.66666667% !important;
+			}
+
+
+			.col-sm-10 {
+				width: 83.333333% !important;
+			}
+
+
+			.col-sm-12 {
+				width: 100% !important;
+			}
+
+
+			/* [FIN] ESTILOS ESPECIFICOS */
 		}
 
-		.pb-10 {
-			padding-bottom: 10% !important;
+		@media only screen and (max-width: 400px) {
+
+			.textmb {
+				font-size: 25px !important;
+			}
+
+			.textmb2 {
+				font-size: 25px !important;
+			}
+
+			.textmb3 {
+				font-size: 15px !important;
+			}
+
 		}
-
-		.ph-5 {
-			padding-right: 5% !important;
-			padding-left: 5% !important;
-		}
-
-		.ph-10 {
-			padding-right: 10% !important;
-			padding-left: 10% !important;
-		}
-
-		.pl-5 {
-			padding-left: 5% !important;
-		}
-
-		.pr-5 {
-			padding-right: 5% !important;
-		}
-
-		.mt-0 {
-			margin-top: 0% !important;
-		}
-
-		.mt-5 {
-			margin-top: 5% !important;
-		}
-
-		.mt-10 {
-			margin-top: 10% !important;
-		}
-
-		.mb-0 {
-			margin-bottom: 0% !important;
-		}
-
-		.mb-5 {
-			margin-bottom: 5% !important;
-		}
-
-		.mb-10 {
-			margin-bottom: 10% !important;
-		}
-
-		/* WIDTH STYLES */
-	
-		.col-sm-1 {
-			width: 8.33333333% !important;
-		}
-
-		.col-sm-2 {
-			width: 16.66666667% !important;
-		}
-
-		.col-sm-3 {
-			width: 25% !important;
-		}
-
-		.col-sm-4 {
-			width: 33.33333333% !important;
-		}
-
-
-		.col-sm-6 {
-			width: 50% !important;
-		}
-
-		
-		.col-sm-8 {
-			width: 66.66666667% !important;
-		}
-
-
-		.col-sm-10 {
-			width: 83.333333% !important;
-		}
-
-
-		.col-sm-12 {
-			width: 100% !important;
-		}
-
-
-		/* [FIN] ESTILOS ESPECIFICOS */
-	}
-
-	@media only screen and (max-width: 400px) {
-
-		.textmb{
-			font-size: 25px !important;
-		}
-		.textmb2{
-			font-size: 25px !important;
-		}
-		.textmb3{
-			font-size: 15px !important;
-		}
-
-	}
-</style>
+	</style>
 </head>
+
 <body style="display: block; width:600; max-width:600px; margin: 0 auto; padding:0; background: #FFFFFF; ">
-  <center style="background-color:#FFFFFF;">
-    <!-- ================= HEADER ================= -->
-    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable"
-      style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
-      <tr>
-        <td align="center" valign="top">
-          <!-- LOGO -->
-          <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
-            style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
-              bgcolor="#ffffff">
-								<tbody>
-                  <tr>
-										<td class="col-sm-12 text-center pt-10 pb-0" style="text-align:center; width: 600px; padding: 40px 0 20px 0; color: #FFFFFF; font-size: 15px; font-family: Montserrat, sans-serif;">
-											<div>																			
-											<center>
-                          <a href="https://visbl.com/" target="_blank">
-							<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/visbl_logo.png" alt="visbl" width="120"
-								height="40">
-                          </a>
-                      </center>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-              </table>
+	<center style="background-color:#FFFFFF;">
+		<!-- ================= HEADER ================= -->
+		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable"
+			style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
+			<tr>
+				<td align="center" valign="top">
+					<!-- LOGO -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-12 text-center pt-10 pb-0"
+									style="text-align:center; width: 600px; padding: 40px 0 20px 0; color: #FFFFFF; font-size: 15px; font-family: Montserrat, sans-serif;">
+									<div>
+										<center>
+											<a href="https://visbl.com/" target="_blank">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/visbl_logo.png"
+													alt="visbl" width="120" height="40">
+											</a>
+										</center>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- MAIN TITLE -->
-              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;" bgcolor="#ffffff">
-								<tbody>
-									<tr>
-                    <td class="col-sm-10 block-auto"
-                      style=" text-align:center; width: 500px; color: #222222; font-size: 32px; font-family: Montserrat, sans-serif; padding: 20px 40px;padding-bottom:16px;font-weight: 700;">
-											<div>
-                        <span style="color: #002BC6; font-size: 32px; font-weight: 700;line-height: 122%;">Main title</span>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-              </table>
+					<!-- MAIN TITLE -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto"
+									style=" text-align:center; width: 500px; color: #222222; font-size: 32px; font-family: Montserrat, sans-serif; padding: 20px 40px;padding-bottom:16px;font-weight: 700;">
+									<div>
+										<span
+											style="color: #002BC6; font-size: 32px; font-weight: 700;line-height: 122%;">Main
+											title</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- SUBTITLE -->
-              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;" bgcolor="#ffffff">
-								<tbody>
-									<tr>
-                    <td class="col-sm-10 block-auto"
-                      style=" text-align:center; width: 500px; color: #222222; font-size: 18px; font-family: Montserrat, sans-serif; padding: 0px 40px 20px 40px;">
-											<div>
-                        <span style="font-weight: 400;font-size:18px;line-height: 122%;">Subtitle • Lorem ipsum dolor sit amet consectetur. Dolor in neque vehicula consequat elit</span>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-              </table>
+					<!-- SUBTITLE -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto"
+									style=" text-align:center; width: 500px; color: #222222; font-size: 18px; font-family: Montserrat, sans-serif; padding: 0px 40px 20px 40px;">
+									<div>
+										<span style="font-weight: 400;font-size:18px;line-height: 122%;">Subtitle •
+											Lorem ipsum dolor sit amet consectetur. Dolor in neque vehicula consequat
+											elit</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- ================= CLOSING ================= -->
-				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-					style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
-					<tr>
-					<td align="center" style="padding:16px;padding-bottom: 40px;">
-						<a href="#"
-						style="display:inline-block; background:#002BC6; color:#E4E8F7; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
-						button
-						</a>
-					</td>
-					</tr>
+					<!-- ================= CLOSING ================= -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
+						<tr>
+							<td align="center" style="padding:16px;padding-bottom: 40px;">
+								<a href="#"
+									style="display:inline-block; background:#002BC6; color:#E4E8F7; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
+									button
+								</a>
+							</td>
+						</tr>
 
-				</table>
+					</table>
 
-			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto; padding:16px;">
-            
-              <!-- Párrafo 1 -->
-              <tbody>
-                <tr>
-                  <td align="left" style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding-bottom:16px;padding-left:40px;padding-right:40px;">
-					Body - Lorem ipsum dolor sit amet consectetur. Ornare fames eros vulputate id sociis faucibus lorem vel. Nibh sagittis
-					nibh egestas turpis. Sed nec mattis sem eget.
-                  </td>
-				</tr>
-              </tbody>
-			</table>
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto; padding:16px;">
 
-			<!-- PLACEHOLDER IMAGE 2 -->
-              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; min-width: 100%;">
-				<tbody>
-					<tr>
-						<td width="50" class="col-sm-1" style="width: 50px;">&nbsp;</td>
-						<td valign="top" class="col-sm-1 pv-5" style="text-align:left; width: 80px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
-							<span style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
-								<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/lightBulbIcon.png" alt="Icon 1" width="22"
-									height="22" style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
-							</span>
-						</td>
-						<td class="col-sm-8 pr-5 pv-5" style=" text-align:left; width: 470px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
-							<div>	
-								Don’t miss out—your next opportunity could be waiting.
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+						<!-- Párrafo 1 -->
+						<tbody>
+							<tr>
+								<td align="left"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding-bottom:16px;padding-left:40px;padding-right:40px;">
+									Body - Lorem ipsum dolor sit amet consectetur. Ornare fames eros vulputate id sociis
+									faucibus lorem vel. Nibh sagittis
+									nibh egestas turpis. Sed nec mattis sem eget.
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-			<!-- TIP 1 -->
-			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-				style="width: 100%; max-width: 100%; min-width: 100%;">
-				<tbody>
-					<tr>
-						<!-- Text -->
-						<td width="50%" valign="top"
-							style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 24px 0 40px;">
-							<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 1</strong><br>
-							Lorem ipsum dolor sit amet consectetur. In sem ornare sit odio. Orci morbi dui malesuada fringilla egestas pulvinar lobortis risus maecenas. Ullamcorper ac.
-						</td>
-						<!-- Image -->
-						<td width="50%" align="center" valign="middle">
-							<table role="presentation" border="0" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:24px; width:245px; height:250px;">
-								<tr>
-									<td align="center" valign="middle" style="height:250px;">
-										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png" width="245" height="250" alt="Tip 1 Image" style="display:block; border-radius:16px;">
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+					<!-- PLACEHOLDER IMAGE 2 -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;">
+						<tbody>
+							<tr>
+								<td width="50" class="col-sm-1" style="width: 50px;">&nbsp;</td>
+								<td valign="top" class="col-sm-1 pv-5"
+									style="text-align:left; width: 80px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<span
+										style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/lightBulbIcon.png"
+											alt="Icon 1" width="22" height="22"
+											style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
+									</span>
+								</td>
+								<td class="col-sm-8 pr-5 pv-5"
+									style=" text-align:left; width: 470px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										Don’t miss out—your next opportunity could be waiting.
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-			<!-- TIP 2 -->
-			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-				style="max-width:600px; margin-top:24px; padding:16px;margin-bottom: 24px;">
-				<tbody>
-					<tr>
-						<!-- Image -->
-						<td width="50%" align="center" valign="middle" style="padding-left:40px;">
-							<table role="presentation" border="0" cellpadding="0" cellspacing="0" style="background:#F4F5F7; border-radius:24px; width:245px; height:250px;">
-								<tr>
-									<td align="center" valign="middle" style="height:250px;">
-										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png" width="245" height="250" alt="Tip 2 Image" style="display:block; border-radius:16px;">
-									</td>
-								</tr>
-							</table>
-						</td>
-						<!-- Text -->
-						<td width="50%" valign="top" style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 0 0 24px;">
-							<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 2</strong><br>
-							Lorem ipsum dolor sit amet consectetur. Vitae curabitur consectetur bibendum massa nisi aliquam accumsan enim. Donec scelerisque ac tellus non.
-						</td>
-					</tr>
-				</tbody>
-			</table>
+					<!-- TIP 1 -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;">
+						<tbody>
+							<tr>
+								<!-- Text -->
+								<td width="50%" valign="top"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 24px 0 40px;">
+									<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 1</strong><br>
+									Lorem ipsum dolor sit amet consectetur. In sem ornare sit odio. Orci morbi dui
+									malesuada fringilla egestas pulvinar lobortis risus maecenas. Ullamcorper ac.
+								</td>
+								<!-- Image -->
+								<td width="50%" align="center" valign="middle">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+										style="background:#ffffff; border-radius:24px; width:245px; height:250px;">
+										<tr>
+											<td align="center" valign="middle" style="height:250px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+													width="245" height="250" alt="Tip 1 Image"
+													style="display:block; border-radius:16px;">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- BLUE SECTION WITH CTA -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="background:#002BC6; padding:32px; max-width:600px; margin-left:40px;margin-right:40px;margin-bottom:24px;">
-                <tr>
-                  <td align="center" style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:18px; padding-bottom:24px;font-style: normal;font-weight: 400;line-height: 30px; padding: 16px;">
-					Take 2 minutes now to finish it and start receiving faster approvals and better matches.
-                  </td>
-                </tr>
-                
-                <tr>
-                  <td align="center" style="padding:20px;">
-                    <a href="#" style="display:inline-block; background:#FFFFFF; color:#002BC6; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 100%;box-sizing: border-box;">
-						Finish your profile
-                    </a>
-                  </td>
-                </tr>
-              </table>
+					<!-- TIP 2 -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin-top:24px; padding:16px;margin-bottom: 24px;">
+						<tbody>
+							<tr>
+								<!-- Image -->
+								<td width="50%" align="center" valign="middle" style="padding-left:40px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+										style="background:#F4F5F7; border-radius:24px; width:245px; height:250px;">
+										<tr>
+											<td align="center" valign="middle" style="height:250px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+													width="245" height="250" alt="Tip 2 Image"
+													style="display:block; border-radius:16px;">
+											</td>
+										</tr>
+									</table>
+								</td>
+								<!-- Text -->
+								<td width="50%" valign="top"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 0 0 24px;">
+									<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 2</strong><br>
+									Lorem ipsum dolor sit amet consectetur. Vitae curabitur consectetur bibendum massa
+									nisi aliquam accumsan enim. Donec scelerisque ac tellus non.
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- PLACEHOLDER IMAGE 3 -->
-              <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
-                style="width: 100%; max-width: 100%; min-width: 100%;background-color: #ffffff;"
-                bgcolor="#ffffff">
-								<tbody>
-									<tr>
-                    <td class="col-sm-10 block-auto text-center pv-5"
-                      style=" text-align:center; width: 504px; padding: 20px 40px; color: #222222; font-size: 20px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
-											<div>	
-												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png" alt="Placeholder Image"
-													width="500" height="200" style="max-width: 100%; height: auto;">
-											</div>
-										</td>
-									</tr>
-								</tbody>
-              </table>
+					<!-- BLUE SECTION WITH CTA -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+						style="background:#002BC6; padding:32px; max-width:600px; margin-left:40px;margin-right:40px;margin-bottom:24px;">
+						<tr>
+							<td align="center"
+								style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:18px; padding-bottom:24px;font-style: normal;font-weight: 400;line-height: 30px; padding: 16px;">
+								Take 2 minutes now to finish it and start receiving faster approvals and better matches.
+							</td>
+						</tr>
 
-              <!-- ICON SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto; padding:16px;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="padding: 20px 40px;">
-                      <div style="display: inline-block; background:#002BC6; border-radius:50%; width:60px; height:60px; text-align:center; line-height:60px;">
-                        <span style="color: #FFFFFF; font-size: 24px; font-weight: bold;">📊</span>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+						<tr>
+							<td align="center" style="padding:20px;">
+								<a href="#"
+									style="display:inline-block; background:#FFFFFF; color:#002BC6; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 100%;box-sizing: border-box;">
+									Finish your profile
+								</a>
+							</td>
+						</tr>
+					</table>
 
-              <!-- NEXT TITLE SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td align="left" style="font-family:Montserrat, sans-serif; font-size:24px; line-height:30px; color:#000000; padding:16px 40px; font-weight: 700;">
-                      Next title descriptio...
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+					<!-- PLACEHOLDER IMAGE 3 -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto text-center pv-5"
+									style=" text-align:center; width: 504px; padding: 20px 40px; color: #222222; font-size: 20px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+											alt="Placeholder Image" width="500" height="200"
+											style="max-width: 100%; height: auto;">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- STATISTICS SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="padding:16px;">
-                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                          <td width="50%" valign="top" align="center" style="padding:12px;">
-                            <div style="font-family:Montserrat, sans-serif; font-size:48px; font-weight:700; color:#002BC6; line-height:1;">
-                              26k
-                            </div>
-                            <div style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; margin-top:8px;">
-                              Lorem ipsum dolor sit
-                            </div>
-                          </td>
-                          <td width="50%" valign="top" align="center" style="padding:12px;">
-                            <div style="font-family:Montserrat, sans-serif; font-size:48px; font-weight:700; color:#002BC6; line-height:1;">
-                              100M
-                            </div>
-                            <div style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; margin-top:8px;">
-                              Lorem ipsum dolor sit
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+					<!-- ICON SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto; padding:16px;">
+						<tbody>
+							<tr>
+								<td align="center" style="padding: 20px 40px;">
+									<div
+										style="display: inline-block; background:#002BC6; border-radius:50%; width:60px; height:60px; text-align:center; line-height:60px;">
+										<span style="color: #FFFFFF; font-size: 24px; font-weight: bold;">📊</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- POWERED BY GOOGLE SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="font-family:Montserrat, sans-serif; font-size:14px; color:#666; padding:20px 40px;">
-                      Trusted by:
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center" style="padding: 0 40px 20px 40px;">
-                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
-                        <tr>
-                          <td style="padding: 0 10px;">
-                            <img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google" alt="Google" width="80" height="30">
-                          </td>
-                          <td style="padding: 0 10px;">
-                            <img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google" alt="Google" width="80" height="30">
-                          </td>
-                          <td style="padding: 0 10px;">
-                            <img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google" alt="Google" width="80" height="30">
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+					<!-- NEXT TITLE SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="left"
+									style="font-family:Montserrat, sans-serif; font-size:24px; line-height:30px; color:#000000; padding:16px 40px; font-weight: 700;">
+									Next title descriptio...
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- READY TO GO SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="font-family:Montserrat, sans-serif; font-size:24px; font-weight:700; color:#000000; padding:30px 40px 20px 40px; line-height:30px;">
-                      Ready to go next level?
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center" style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; padding:0 40px 20px 40px;">
-                      • Lorem elit minim pariatur<br>
-                      • Consectetur adipiscing elit<br>
-                      • Ullamcorper dignissim suspendisse
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+					<!-- STATISTICS SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center" style="padding:16px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td width="50%" valign="top" align="center" style="padding:12px;">
+												<div
+													style="font-family:Montserrat, sans-serif; font-size:48px; font-weight:700; color:#002BC6; line-height:1;">
+													26k
+												</div>
+												<div
+													style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; margin-top:8px;">
+													Lorem ipsum dolor sit
+												</div>
+											</td>
+											<td width="50%" valign="top" align="center" style="padding:12px;">
+												<div
+													style="font-family:Montserrat, sans-serif; font-size:48px; font-weight:700; color:#002BC6; line-height:1;">
+													100M
+												</div>
+												<div
+													style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; margin-top:8px;">
+													Lorem ipsum dolor sit
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- OUR CUSTOMERS SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto;">
-                <tbody>
-                  <tr>
-                    <td align="center" style="font-family:Montserrat, sans-serif; font-size:20px; font-weight:700; color:#000000; padding:20px 40px 10px 40px;">
-                      Our customers
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center" style="font-family:Montserrat, sans-serif; font-size:14px; color:#666; padding:0 40px;">
-                      Lorem ipsum dolor sit amet consectetur. Dolor in neque vehicula consequat elit proin ornare.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center" style="padding: 20px 40px;">
-                      <img src="https://via.placeholder.com/100x40/4285F4/FFFFFF?text=Google" alt="Google" width="100" height="40">
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+					<!-- POWERED BY GOOGLE SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:14px; color:#666; padding:20px 40px;">
+									Trusted by:
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="padding: 0 40px 20px 40px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+										align="center">
+										<tr>
+											<td style="padding: 0 10px;">
+												<img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google"
+													alt="Google" width="80" height="30">
+											</td>
+											<td style="padding: 0 10px;">
+												<img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google"
+													alt="Google" width="80" height="30">
+											</td>
+											<td style="padding: 0 10px;">
+												<img src="https://via.placeholder.com/80x30/4285F4/FFFFFF?text=Google"
+													alt="Google" width="80" height="30">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-              <!-- FINAL CTA SECTION -->
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-                style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
-                <tr>
-                  <td align="center" style="padding:20px 40px;">
-                    <a href="#"
-                      style="display:inline-block; background:#002BC6; color:#FFFFFF; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
-                      Get started now
-                    </a>
-                  </td>
-                </tr>
-              </table>
+					<!-- READY TO GO SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:24px; font-weight:700; color:#000000; padding:30px 40px 20px 40px; line-height:30px;">
+									Ready to go next level?
+								</td>
+							</tr>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:16px; color:#666; padding:0 40px 20px 40px;">
+									• Lorem elit minim pariatur<br>
+									• Consectetur adipiscing elit<br>
+									• Ullamcorper dignissim suspendisse
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-          <table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; min-width: 100%; background-color: #F3F1FA;" bgcolor="#F3F1FA">
-								<tbody>
-									<tr>
-<td class="col-sm-6 text-center pv-5" style=" text-align:center; width: 154px; padding: 30px 0; color: #3F484F; font-size: 11px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
-<div>
-	<span>© 2025 VISBL. All rights reserved.</span><br><br><br>
-	
-	<a href="https://www.facebook.com/people/Visbl/61563372264589/" target="_blank" style="text-decoration: none;">
-		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/facebook.png" alt="" style="width:46px;">
-	</a>
-		&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://www.instagram.com/visblsearch" target="_blank" style="text-decoration: none;">
-		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/instagram.png" alt="" style="width:46px;">
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://x.com/visblsearch" target="_blank" style="text-decoration: none;">
-		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/twitter.png" alt="" style="width:46px;">
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="https://www.linkedin.com/company/89599705/" target="_blank" style="text-decoration: none;">
-		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/linkedin.png" alt="" style="width:46px;">
-	</a>
+					<!-- OUR CUSTOMERS SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:20px; font-weight:700; color:#000000; padding:20px 40px 10px 40px;">
+									Our customers
+								</td>
+							</tr>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:14px; color:#666; padding:0 40px;">
+									Lorem ipsum dolor sit amet consectetur. Dolor in neque vehicula consequat elit proin
+									ornare.
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="padding: 20px 40px;">
+									<img src="https://via.placeholder.com/100x40/4285F4/FFFFFF?text=Google" alt="Google"
+										width="100" height="40">
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-<br><br><br>
-<a href="http://" target="_blank">Unsubscribe</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="mailto:getvisbl@visbl.com" target="_blank">Contact Us</a> <br><a href="http://" target="_blank">View in browser</a>
+					<!-- FINAL CTA SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
+						<tr>
+							<td align="center" style="padding:20px 40px;">
+								<a href="#"
+									style="display:inline-block; background:#002BC6; color:#FFFFFF; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
+									Get started now
+								</a>
+							</td>
+						</tr>
+					</table>
+
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #F3F1FA;"
+						bgcolor="#F3F1FA">
+						<tbody>
+							<tr>
+								<td class="col-sm-6 text-center pv-5"
+									style=" text-align:center; width: 154px; padding: 30px 0; color: #3F484F; font-size: 11px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										<span>© 2025 VISBL. All rights reserved.</span><br><br><br>
+
+										<a href="https://www.facebook.com/people/Visbl/61563372264589/" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/facebook.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.instagram.com/visblsearch" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/instagram.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://x.com/visblsearch" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/twitter.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.linkedin.com/company/89599705/" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/linkedin.png"
+												alt="" style="width:46px;">
+										</a>
+
+										<br><br><br>
+										<a href="http://"
+											target="_blank">Unsubscribe</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+											href="mailto:getvisbl@visbl.com" target="_blank">Contact Us</a> <br><a
+											href="http://" target="_blank">View in browser</a>
 
 
-											</div>
-										</td>
-									
-										
-									</tr>
-								</tbody>
-							</table>
+									</div>
+								</td>
 
-        </td>
-      </tr>
-    </table>
-  </center>
+
+							</tr>
+						</tbody>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</center>
 </body>
+
 </html>
