@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<title>VISBL Email Template</title>
+
+	<style type="text/css">
+		:root {
+			color-scheme: light dark;
+			supported-color-schemes: light dark;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.light-bg {
+				background-color: #FFFFFF !important;
+			}
+		}
+	</style>
+	<style type="text/css">
+		/* RESET STYLES */
+
+		html {
+			margin: 0;
+			padding: 0;
+			background-color: #222222;
+		}
+
+		body,
+		#bodyTable,
+		#bodyCell {
+			height: 100% !important;
+			margin: 0;
+			padding: 0;
+			width: 100% !important;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table[id=bodyTable] {
+			width: 100% !important;
+			margin: auto;
+			max-width: 600px !important;
+			font-weight: normal;
+		}
+
+		/* Force Hotmail/Outlook.com to display line heights normally. */
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		/* Force Outlook 2007 and up to provide a "view in browser" message. */
+		img {
+			-ms-interpolation-mode: bicubic;
+			outline: none;
+			text-decoration: none;
+		}
+
+		/* Force IE to smoothly render resized images. */
+		body,
+		table,
+		td,
+		p,
+		a,
+		li,
+		blockquote {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			font-weight: normal !important;
+		}
+
+		body,
+		#bodyTable {
+			background-color: #FFFFFF;
+		}
+
+		#emailBody {
+			background-color: #FFFFFF;
+		}
+
+		.hidden-lg {
+			display: none !important;
+			mso-hide: all !important;
+		}
+
+
+		/*//// MOBILE STYLES /////*/
+
+		@media only screen and (max-width: 600px) {
+
+			/*////// CLIENT-SPECIFIC STYLES //////*/
+			body {
+				width: 100% !important;
+				min-width: 100% !important;
+			}
+
+			table[id="emailBody"] {
+				width: 100% !important;
+			}
+
+			/* Create top space for every second element in a block */
+			.hidden {
+				display: none;
+			}
+
+			.hidden-sm {
+				display: none !important;
+			}
+
+			.hidden-lg {
+				display: table !important;
+				overflow: visible !important;
+				max-height: inherit !important;
+			}
+
+			.hidden-lg-inline {
+				display: inline-block !important;
+				overflow: visible !important;
+				max-height: inherit !important;
+			}
+
+			.textbody {
+				font-size: 15px !important;
+				line-height: 20px !important;
+			}
+
+			.textbody #personalizacion {
+				font-size: 18px !important;
+			}
+
+			/* [INICIO] ESTILOS PREESTABLECIDOS */
+			/* TEXT ALIGN */
+
+			.text-center {
+				text-align: center !important;
+			}
+
+			.text-left {
+				text-align: left !important;
+			}
+
+			/* IMAGE ALIGN */
+
+			.height-auto {
+				height: auto !important;
+			}
+
+			/* PADDING STYLES */
+
+			.pv-5 {
+				padding-top: 5% !important;
+				padding-bottom: 5% !important;
+			}
+
+			.pv-10 {
+				padding-top: 10% !important;
+				padding-bottom: 10% !important;
+			}
+
+			.pt-5 {
+				padding-top: 5% !important;
+			}
+
+			.pt-10 {
+				padding-top: 10% !important;
+			}
+
+
+			.pb-5 {
+				padding-bottom: 5% !important;
+			}
+
+			.pb-10 {
+				padding-bottom: 10% !important;
+			}
+
+			.ph-5 {
+				padding-right: 5% !important;
+				padding-left: 5% !important;
+			}
+
+			.ph-10 {
+				padding-right: 10% !important;
+				padding-left: 10% !important;
+			}
+
+			.pl-5 {
+				padding-left: 5% !important;
+			}
+
+			.pr-5 {
+				padding-right: 5% !important;
+			}
+
+			.mt-0 {
+				margin-top: 0% !important;
+			}
+
+			.mt-5 {
+				margin-top: 5% !important;
+			}
+
+			.mt-10 {
+				margin-top: 10% !important;
+			}
+
+			.mb-0 {
+				margin-bottom: 0% !important;
+			}
+
+			.mb-5 {
+				margin-bottom: 5% !important;
+			}
+
+			.mb-10 {
+				margin-bottom: 10% !important;
+			}
+
+			/* WIDTH STYLES */
+
+			.col-sm-1 {
+				width: 8.33333333% !important;
+			}
+
+			.col-sm-2 {
+				width: 16.66666667% !important;
+			}
+
+			.col-sm-3 {
+				width: 25% !important;
+			}
+
+			.col-sm-4 {
+				width: 33.33333333% !important;
+			}
+
+
+			.col-sm-6 {
+				width: 50% !important;
+			}
+
+
+			.col-sm-8 {
+				width: 66.66666667% !important;
+			}
+
+
+			.col-sm-10 {
+				width: 83.333333% !important;
+			}
+
+
+			.col-sm-12 {
+				width: 100% !important;
+			}
+
+
+			/* [FIN] ESTILOS ESPECIFICOS */
+		}
+
+		@media only screen and (max-width: 400px) {
+
+			.textmb {
+				font-size: 25px !important;
+			}
+
+			.textmb2 {
+				font-size: 25px !important;
+			}
+
+			.textmb3 {
+				font-size: 15px !important;
+			}
+
+		}
+	</style>
+</head>
+
+<body style="display: block; width:600; max-width:600px; margin: 0 auto; padding:0; background: #FFFFFF; ">
+	<center style="background-color:#FFFFFF;">
+		<!-- ================= HEADER ================= -->
+		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable"
+			style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
+			<tr>
+				<td align="center" valign="top">
+					<!-- LOGO -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-12 text-center pt-10 pb-0"
+									style="text-align:center; width: 600px; padding: 40px 0 20px 0; color: #FFFFFF; font-size: 15px; font-family: Montserrat, sans-serif;">
+									<div>
+										<center>
+											<a href="https://visbl.com/" target="_blank">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/visbl_logo.png"
+													alt="visbl" width="120" height="40">
+											</a>
+										</center>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- MAIN TITLE -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto"
+									style=" text-align:center; width: 500px; color: #222222; font-size: 32px; font-family: Montserrat, sans-serif; padding: 20px 40px;padding-bottom:16px;font-weight: 700;">
+									<div>
+										<span
+											style="color: #002BC6; font-size: 32px; font-weight: 700;line-height: 122%;">Main
+											title</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- SUBTITLE -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto"
+									style=" text-align:center; width: 500px; color: #222222; font-size: 18px; font-family: Montserrat, sans-serif; padding: 0px 40px 16px 40px;">
+									<div>
+										<span
+											style="font-weight: 400;font-size:18px;line-height: 122%;color: #000;text-align: center;font-family: Montserrat; font-size: 24px; font-style: normal; font-weight: 500;line-height: 122%;">Subtitle
+											•
+											Lorem ipsum dolor sit amet consectetur. Dolor in neque vehicula consequat
+											elit</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- ================= CLOSING ================= -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;background-color: #FFFFFF;" bgcolor="#FFFFFF">
+						<tr>
+							<td align="center" style="padding:16px;padding-bottom: 40px;">
+								<a href="#"
+									style="display:inline-block; background:#002BC6; color:#E4E8F7; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 90%;box-sizing: border-box;">
+									button
+								</a>
+							</td>
+						</tr>
+
+					</table>
+
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto; padding:16px;">
+
+						<!-- Párrafo 1 -->
+						<tbody>
+							<tr>
+								<td align="left"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding-bottom:16px;padding-left:40px;padding-right:40px;">
+									Body - Lorem ipsum dolor sit amet consectetur. Ornare fames eros vulputate id sociis
+									faucibus lorem vel. Nibh sagittis
+									nibh egestas turpis. Sed nec mattis sem eget.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- PLACEHOLDER IMAGE 2 -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;">
+						<tbody>
+							<tr>
+								<td width="50" class="col-sm-1" style="width: 50px;">&nbsp;</td>
+								<td valign="top" class="col-sm-1 pv-5"
+									style="text-align:left; width: 80px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<span
+										style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/lightBulbIcon.png"
+											alt="Icon 1" width="22" height="22"
+											style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
+									</span>
+								</td>
+								<td class="col-sm-8 pr-5 pv-5"
+									style=" text-align:left; width: 470px; padding: 10px 0 20px 0; color: #222222; font-size: 18px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										Don’t miss out—your next opportunity could be waiting.
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- TIP 1 -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;">
+						<tbody>
+							<tr>
+								<!-- Text -->
+								<td width="50%" valign="top"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 24px 0 40px;">
+									<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 1</strong><br>
+									Lorem ipsum dolor sit amet consectetur. In sem ornare sit odio. Orci morbi dui
+									malesuada fringilla egestas pulvinar lobortis risus maecenas. Ullamcorper ac.
+								</td>
+								<!-- Image -->
+								<td width="50%" align="center" valign="middle">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+										style="background:#ffffff; border-radius:24px; width:245px; height:250px;">
+										<tr>
+											<td align="center" valign="middle" style="height:250px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+													width="245" height="250" alt="Tip 1 Image"
+													style="display:block; border-radius:16px;">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- TIP 2 -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin-top:24px; padding:16px;margin-bottom: 24px;">
+						<tbody>
+							<tr>
+								<!-- Image -->
+								<td width="50%" align="center" valign="middle" style="padding-left:40px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+										style="background:#F4F5F7; border-radius:24px; width:245px; height:250px;">
+										<tr>
+											<td align="center" valign="middle" style="height:250px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+													width="245" height="250" alt="Tip 2 Image"
+													style="display:block; border-radius:16px;">
+											</td>
+										</tr>
+									</table>
+								</td>
+								<!-- Text -->
+								<td width="50%" valign="top"
+									style="font-family:Montserrat, sans-serif; font-size:18px; line-height:30px; color:#000000; padding:0 40px 0 24px;">
+									<strong style="color:#002BC6; font-size:22px; font-weight:700;">Tip 2</strong><br>
+									Lorem ipsum dolor sit amet consectetur. Vitae curabitur consectetur bibendum massa
+									nisi aliquam accumsan enim. Donec scelerisque ac tellus non.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- BLUE SECTION WITH CTA -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+						style="background:#002BC6; padding:32px; max-width:600px; margin-left:40px;margin-right:40px;margin-bottom:12px;">
+						<tr>
+							<td align="center"
+								style="color:#FFFFFF; font-family:Montserrat, sans-serif; font-size:18px; padding-bottom:24px;font-style: normal;font-weight: 700!important;line-height: 30px; padding: 16px;">
+								Take 2 minutes now to finish it and start receiving faster approvals and better matches.
+							</td>
+						</tr>
+
+						<tr>
+							<td align="center" style="padding:20px;">
+								<a href="#"
+									style="display:inline-block; background:#FFFFFF; color:#002BC6; font-size:16px; font-weight:600!important; text-decoration:none; padding:12px 40px; border-radius:45px; font-family:Montserrat, sans-serif;width: 100%;box-sizing: border-box;">
+									finish your profile
+								</a>
+							</td>
+						</tr>
+					</table>
+
+					<!-- PLACEHOLDER IMAGE 3 -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto text-center pv-5"
+									style=" text-align:center; width: 504px; padding: 20px 40px; color: #222222; font-size: 20px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/Placeholder-image.png"
+											alt="Placeholder Image" width="500" height="200"
+											style="max-width: 100%; height: auto;">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding: 20px;">
+								<!-- Stepper Container -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<!-- Step 1: Profile Complete -->
+										<td width="33%" style="vertical-align: top; text-align: center;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td style="text-align: center; position: relative;">
+														<!-- Circle with checkmark -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="margin: 0 auto;">
+															<tr>
+																<td
+																	style="width: 24px; height: 24px; background-color: #4F46E5; border-radius: 50%; text-align: center; vertical-align: middle;">
+																	<span
+																		style="color: #FFFFFF; font-size: 14px; font-weight: bold; line-height: 20px;">
+																		✓
+																	</span>
+																</td>
+															</tr>
+														</table>
+														<!-- Line connector (right side) -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="position: absolute; top: 10px; left: 46%; width: 50%; height: 2px; margin-left: 20px;">
+															<tr>
+																<td style="background-color: #E5E7EB; height: 2px;">
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding-top: 12px; text-align: center;">
+														<div
+															style="color: var(--Primary-Blue, #002BC6);text-align: center;font-family: 'Wavehaus', sans-serif;font-size: 14px;font-style: normal;font-weight: 700; line-height: 1.4;">
+															Profile<br>complete
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+
+										<!-- Step 2: Select your plan -->
+										<td width="33%"
+											style="vertical-align: top; text-align: center; position: relative;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td style="text-align: center; position: relative;">
+														<!-- Line connector (left side) -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="position: absolute; top: 10px; right: 50%; width: 50%; height: 2px; margin-right: 12px;">
+															<tr>
+																<td style="background-color: #E5E7EB; height: 2px;">
+																</td>
+															</tr>
+														</table>
+														<!-- Circle -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="margin: 0 auto;">
+															<tr>
+																<td
+																	style="width: 24px; height: 24px; background-color: #E5E7EB; border-radius: 50%; text-align: center; vertical-align: middle;">
+																	<span
+																		style="display: inline-block; width: 8px; height: 8px; background-color: white; border-radius: 50%; margin-top: 6px;"></span>
+																</td>
+															</tr>
+														</table>
+														<!-- Line connector (right side) -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="position: absolute; top: 10px; left: 50%; width: 50%; height: 2px; margin-left: 10px;">
+															<tr>
+																<td style="background-color: #E5E7EB; height: 2px;">
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding-top: 12px; text-align: center;">
+														<div
+															style="color: var(--Gray-700, #344054); text-align: center; font-family: 'Wavehaus', sans-serif; font-size: 14px; font-style: normal; font-weight: 700; line-height: 1.4;">
+															Select your plan
+														</div>
+														<div
+															style="color: var(--Gray-500, #667085); text-align: center; font-family: 'Wavehaus', sans-serif; font-size: 12px; font-style: normal; font-weight: 600; line-height: 1.4; margin-top: 4px;">
+															Choose the right plan for you
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+
+										<!-- Step 3: Invite your team -->
+										<td width="33%" style="vertical-align: top; text-align: center;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td style="text-align: center; position: relative;">
+														<!-- Line connector (left side) -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="position: absolute; top: 10px; right: 50%; width: 50%; height: 2px; margin-right: 10px;">
+															<tr>
+																<td style="background-color: #E5E7EB; height: 2px;">
+																</td>
+															</tr>
+														</table>
+														<!-- Circle -->
+														<table cellpadding="0" cellspacing="0" border="0"
+															style="margin: 0 auto;">
+															<tr>
+																<td
+																	style="width: 24px; height: 24px; background-color: #E5E7EB; border-radius: 50%; text-align: center; vertical-align: middle;">
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding-top: 12px; text-align: center;">
+														<div
+															style="color: var(--Gray-700, #344054); text-align: center; font-family: 'Wavehaus', sans-serif; font-size: 14px; font-style: normal; font-weight: 700; line-height: 1.4;">
+															Invite your team
+														</div>
+														<div
+															style="color: var(--Gray-500, #667085); text-align: center; font-family: 'Wavehaus', sans-serif; font-size: 12px; font-style: normal; font-weight: 600; line-height: 1.4; margin-top: 4px;">
+															Start collaborating
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+
+					<!-- PLACEHOLDER IMAGE 3 -->
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%;background-color: #ffffff;"
+						bgcolor="#ffffff">
+						<tbody>
+							<tr>
+								<td class="col-sm-10 block-auto text-center pv-5"
+									style=" text-align:center; width: 504px; padding: 20px 40px; color: #222222; font-size: 20px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/video_placeholder.png"
+											alt="Placeholder Image" width="500" height="200"
+											style="max-width: 100%; height: auto;">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding-left: 40px;padding-right: 40px;padding-top: 20px;padding-bottom: 20px;">
+								<!-- Main Container with light purple background -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0"
+									style="background-color: #E4E8F7;">
+									<tr>
+										<td style="padding: 30px;">
+											<!-- Title -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td style="padding-bottom: 20px;">
+														<h2
+															style="margin: 0; color: #000; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 500; line-height: 30px; /* 166.667% */">
+															Task that need to be completed
+														</h2>
+													</td>
+												</tr>
+											</table>
+
+											<!-- Task Item -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0"
+												style="background-color: #FFFFFF; border-radius: 8px;">
+												<tr>
+													<td style="padding: 16px 20px;">
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<!-- Icon -->
+																<td style="width: 40px; vertical-align: middle;">
+																	<table cellpadding="0" cellspacing="0" border="0">
+																		<tr>
+																			<td>
+																				<span
+																					style="display:inline-block; background:#002BC6; border-radius:50%; width:39px; height:39px; text-align:center;">
+																					<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/lightBulbIcon.png"
+																						alt="Icon 1" width="22"
+																						height="22"
+																						style="margin-top:10px; display:block; margin-left:auto; margin-right:auto;">
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+
+																<!-- Task Text -->
+																<td style="padding-left: 16px; vertical-align: middle;">
+																	<span
+																		style="color: #000; font-family: Montserrat; font-size: 14px; font-style: normal; font-weight: 400; line-height: 30px; /* 214.286% */">
+																		Complete company information
+																	</span>
+																</td>
+
+																<!-- Status Badge -->
+																<td
+																	style="text-align: right; vertical-align: middle; white-space: nowrap;">
+																	<table cellpadding="0" cellspacing="0" border="0"
+																		style="margin-left: auto;">
+																		<tr>
+																			<td
+																				style="background-color: #9CA3AF; border-radius: 16px; padding: 6px 16px;">
+																				<table cellpadding="0" cellspacing="0"
+																					border="0">
+																					<tr>
+																						<td
+																							style="vertical-align: middle; padding-right: 6px;">
+																							<span
+																								style="display: inline-block; width: 8px; height: 8px; background-color: #374151; border-radius: 50%;"></span>
+																						</td>
+																						<td
+																							style="vertical-align: middle;">
+																							<span
+																								style="color: #222;text-align: center;font-family: Montserrat; font-size: 11px; font-style: normal; font-weight: 600; line-height: 17.46px; /* 158.727% */ text-transform: uppercase;">
+																								NOT STARTED
+																							</span>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+
+											<!-- Additional Task Items (examples) -->
+											<!-- You can duplicate the task item table above for more tasks -->
+
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding-left: 40px;padding-right:40px;padding-top:12px">
+								<!-- Info Section Container -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td>
+											<!-- Heading -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td>
+														<h2
+															style="color: #002BC6; font-family: Montserrat; font-size: 22px; font-style: normal; font-weight: 700; line-height: 122%; /* 26.84px */;margin-bottom: 0px;">
+															Next? Dive deeper.
+														</h2>
+													</td>
+												</tr>
+											</table>
+
+											<!-- Description Text -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td>
+														<p
+															style="color: #000; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 400; line-height: 30px; /* 166.667% */">
+															Compare offers side-by-side, learn the difference between
+															APR vs. interest rate, and see what fits your budget best.
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding-left: 40px;padding-right: 40px;padding-top: 12px;padding-bottom: 20px;">
+								<!-- FAQ Container -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<!-- FAQ Title -->
+									<tr>
+										<td style="padding-bottom: 20px;">
+											<h2
+												style="color: #002BC6; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 700; line-height: 122%; /* 21.96px */">
+												FAQ
+											</h2>
+										</td>
+									</tr>
+
+									<!-- FAQ Item -->
+									<tr>
+										<td>
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<!-- Icon Column -->
+													<td style="width: 40px; vertical-align: top; padding-right: 16px;">
+														<table cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<td
+																	style="width: 40px; height: 40px; background-color: #002BC6; border-radius: 50%; text-align: center; vertical-align: middle;">
+																	<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/analytics.png"
+																		alt="Icon 1" width="22" height="22"
+																		style="display:block; margin-left:auto; margin-right:auto;">
+																</td>
+															</tr>
+														</table>
+													</td>
+
+													<!-- Text Column -->
+													<td style="vertical-align: top;">
+														<p
+															style="color: #000; font-family: Montserrat; font-size: 18px; font-style: normal; font-weight: 400; line-height: 30px; /* 166.667% */margin-top:0px;">
+															Lorem ipsum dolor sit amet consectetur. Eu gravida elementum
+															adipiscing vulputate vestibulum risus quisque. Eget nisl
+															viverra tincidunt odio cras orci. Ultricies netus volutpat.
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<!-- Add more FAQ items by duplicating the FAQ Item section above -->
+
+								</table>
+							</td>
+						</tr>
+					</table>
+
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding-left: 40px;padding-right: 40px;padding-top: 0px;padding-bottom: 20px;">
+								<!-- Testimonial Card -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0"
+									style="background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 8px;">
+									<tr>
+										<td style="padding: 24px;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<!-- Avatar Column -->
+													<td
+														style="width: 60px; vertical-align: top; padding-right: 16px;padding-top:20px">
+														<table cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<td
+																	style="width: 60px; height: 60px; background-color: #9CA3AF; border-radius: 50%;">
+																</td>
+															</tr>
+														</table>
+													</td>
+
+													<!-- Content Column -->
+													<td style="vertical-align: top;">
+														<!-- Quote -->
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<td style="padding-bottom: 8px;">
+																	<p
+																		style="color: #000;font-family: Montserrat;font-size: 16px;font-style: normal;font-weight: 400;line-height: 30px; /* 187.5% */margin-bottom: 0px;">
+																		"Definitely one of the best burgers in town!"
+																	</p>
+																</td>
+															</tr>
+														</table>
+
+														<!-- Name -->
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<td style="padding-bottom: 8px;">
+																	<p
+																		style="color: var(--Neutral-10, #486284); font-family: Montserrat; font-size: 16px; font-style: normal; font-weight: 400; line-height: 24px; /* 150% */letter-spacing: 0.5px;margin-top: 0px;margin-bottom: 0px;">
+																		Jack Smith
+																	</p>
+																</td>
+															</tr>
+														</table>
+
+														<!-- Stars -->
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<td>
+																	<span
+																		style="color: #4B5563; font-size: 18px; letter-spacing: 2px;">
+																		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/frame.png"
+																			alt="Star" width="16" height="16"
+																			style="vertical-align: middle;">
+																		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/frame.png"
+																			alt="Star" width="16" height="16"
+																			style="vertical-align: middle;">
+																		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/frame.png"
+																			alt="Star" width="16" height="16"
+																			style="vertical-align: middle;">
+																		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/frame.png"
+																			alt="Star" width="16" height="16"
+																			style="vertical-align: middle;">
+																		<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/frame.png"
+																			alt="Star" width="16" height="16"
+																			style="vertical-align: middle;">
+																	</span>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<!-- STATISTICS SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center"
+									style="padding-left:40px;padding-right:40px;padding-bottom:20px;padding-top:20px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+										style="background:rgba(239, 242, 246, 0.40);border-radius: 24px;">
+										<tr>
+											<td width="100%" valign="top" align="center" style="padding:12px;">
+												<div
+													style="padding-top:16px;color: var(--Neutral-10, #486284);text-align: center; font-family: Montserrat;font-size: 60px;font-style: normal;font-weight: 700; line-height: 76px; /* 126.667% */letter-spacing: 0.5px;">
+													24+
+												</div>
+												<div
+													style="color: #000;text-align: center;font-family: Montserrat;font-size: 18px;font-style: normal;font-weight: 400;line-height: 30px; /* 166.667% */padding-bottom:16px;">
+													Lorem ipsum dolor sit
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- POWERED BY GOOGLE SECTION -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="max-width:600px; margin:0 auto;">
+						<tbody>
+							<tr>
+								<td align="center"
+									style="font-family:Montserrat, sans-serif; font-size:14px; color:#666; padding:20px 40px;">
+									Trusted by:
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="padding: 0 40px 20px 40px;">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"
+										style="border-bottom: 1px solid #DEE5ED;">
+										<tbody>
+											<tr>
+												<td style="padding: 0 10px;width:170px;text-align:left;padding-bottom:12px;"
+													width="">
+													<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/logo_google.png"
+														alt="Google" width="80" height="30">
+												</td>
+												<td
+													style="padding: 0 10px;width:170px;text-align:center;padding-bottom:12px;">
+													<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/logo_google.png"
+														alt="Google" width="80" height="30">
+												</td>
+												<td
+													style="padding: 0 10px;width:170px;text-align:right;padding-bottom:12px;">
+													<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/logo_google.png"
+														alt="Google" width="80" height="30">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding: 20px; text-align: center;">
+								<!-- Icon -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td style="text-align: center; padding-bottom: 20px;">
+											<span style="font-size: 48px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/send_mail.png"
+													alt="Rocket" width="48" height="48"
+													style="display: inline-block; vertical-align: middle;">
+											</span>
+										</td>
+									</tr>
+								</table>
+
+								<!-- Heading -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td
+											style="text-align: left; padding-bottom: 0px;padding-left: 40px;padding-right: 40px;">
+											<h2
+												style="color: #002BC6; font-family: Montserrat; font-size: 32px; font-style: normal; font-weight: 700; line-height: 40px; /* 125% */ letter-spacing: 0.5px;">
+												Ready to go next level?
+											</h2>
+										</td>
+									</tr>
+								</table>
+
+								<!-- Checklist Items -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0"
+									style="margin: 0 auto;border-bottom:1px solid #C7CBD9;">
+									<!-- Item 1 -->
+									<tr>
+										<td style="padding-bottom: 12px;padding-left:40px;padding-right:40px;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<!-- Checkmark -->
+													<td style="width: 20px; vertical-align: top; padding-right: 12px;">
+														<span
+															style="color: #3730A3; font-size: 16px; font-weight: bold;">✓</span>
+													</td>
+													<!-- Text -->
+													<td style="text-align: left; vertical-align: top;">
+														<p
+															style="color: #000; font-family: Montserrat;  font-size: 18px; font-style: normal; font-weight: 400; line-height: 28px; /* 155.556% */ letter-spacing: 0.5px;margin: 0 auto;">
+															The best burger in town
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<!-- Item 2 -->
+									<tr>
+										<td style="padding-bottom: 12px;padding-left:40px;padding-right:40px;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<!-- Checkmark -->
+													<td style="width: 20px; vertical-align: top; padding-right: 12px;">
+														<span
+															style="color: #3730A3; font-size: 16px; font-weight: bold;">✓</span>
+													</td>
+													<!-- Text -->
+													<td style="text-align: left; vertical-align: top;">
+														<p
+															style="color: #000; font-family: Montserrat;  font-size: 18px; font-style: normal; font-weight: 400; line-height: 28px; /* 155.556% */ letter-spacing: 0.5px;margin: 0 auto;">
+															The best burger in town
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<!-- Item 3 -->
+									<tr>
+										<td style="padding-bottom: 32px;padding-left:40px;padding-right:40px;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<!-- Checkmark -->
+													<td style="width: 20px; vertical-align: top; padding-right: 12px;">
+														<span
+															style="color: #3730A3; font-size: 16px; font-weight: bold;">✓</span>
+													</td>
+													<!-- Text -->
+													<td style="text-align: left; vertical-align: top;">
+														<p
+															style="color: #000; font-family: Montserrat;  font-size: 18px; font-style: normal; font-weight: 400; line-height: 28px; /* 155.556% */ letter-spacing: 0.5px;margin: 0 auto;">
+															The best burger in town
+														</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding: 20px;">
+								<!-- Main Container -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<!-- Heading -->
+									<tr>
+										<td style="text-align: center; padding-bottom: 16px;">
+											<h2
+												style="color: #002BC6; font-family: Montserrat;font-size: 32px;font-style: normal;font-weight: 700;line-height: 40px; /* 125% */letter-spacing: 0.5px;margin-bottom:0px;">
+												Our customers
+											</h2>
+										</td>
+									</tr>
+
+									<!-- Description -->
+									<tr>
+										<td style="text-align: center; padding-bottom: 0px;">
+											<p
+												style="color: #000; font-family: Montserrat;font-size: 18px;font-style: normal;font-weight: 400;line-height: 30px; /* 166.667% */">
+												Our customers accomplish amazing things every day.<br>
+												They work to find cures to cancer, travel to space.
+											</p>
+										</td>
+									</tr>
+
+									<!-- Google Logo -->
+									<tr>
+										<td style="text-align: center; padding-bottom: 32px;">
+											<span
+												style="color: #5F6368; font-size: 48px; font-weight: 400; font-family: 'Product Sans', Arial, sans-serif; letter-spacing: -2px;">
+												<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/logo_google.png"
+													alt="Google" width="120" height="40"
+													style="display: inline-block; vertical-align: middle;">
+											</span>
+										</td>
+									</tr>
+
+									<!-- Icon -->
+									<tr>
+										<td style="text-align: center; padding-bottom: 32px;">
+											<table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+												<tr>
+													<td
+														style="width: 63px; height: 63px;border-radius: 50%; text-align: center; vertical-align: middle; background-color: #FFFFFF;">
+														<span
+															style="color: #3730A3; font-size: 32px; line-height: 60px;">
+															<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/10/group.png"
+																alt="Quote" width="63" height="63"
+																style="display: inline-block; vertical-align: middle;">
+														</span>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<!-- Checklist Container -->
+									<tr>
+										<td>
+											<table width="100%" cellpadding="0" cellspacing="0" border="0"
+												style="max-width: 400px; margin: 0 auto;">
+												<!-- Item 1 -->
+												<tr>
+													<td style="border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<!-- Checkmark -->
+																<td
+																	style="width: 24px; vertical-align: middle; padding-right: 12px;">
+																	<table cellpadding="0" cellspacing="0" border="0">
+																		<tr>
+																			<td
+																				style="text-align: center; vertical-align: middle; background-color: #FFFFFF;">
+																				<span
+																					style="color: #1F2937; font-size: 13px; font-weight: bold; line-height: 14px;border: 2px solid #1F2937;border-radius: 100%;padding:6px;">✓</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Text -->
+																<td style="text-align: left; vertical-align: middle;">
+																	<p
+																		style="margin: 0; color: #000;font-family: Montserrat;font-size: 16px;font-style: normal;font-weight: 400;line-height: 28px; /* 175% */letter-spacing: 0.5px;">
+																		Update profile information
+																	</p>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+
+												<!-- Item 2 -->
+												<tr>
+													<td style="border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<!-- Checkmark -->
+																<td
+																	style="width: 24px; vertical-align: middle; padding-right: 12px;">
+																	<table cellpadding="0" cellspacing="0" border="0">
+																		<tr>
+																			<td
+																				style="text-align: center; vertical-align: middle; background-color: #FFFFFF;">
+																				<span
+																					style="color: #1F2937; font-size: 13px; font-weight: bold; line-height: 14px;border: 2px solid #1F2937;border-radius: 100%;padding:6px;">✓</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Text -->
+																<td style="text-align: left; vertical-align: middle;">
+																	<p
+																		style="margin: 0; color: #000; font-family: Montserrat;font-size: 16px;font-style: normal;font-weight: 400;line-height: 28px; /* 175% */letter-spacing: 0.5px;">
+																		Let borrowers know you're a Visbl
+																	</p>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+
+												<!-- Item 3 -->
+												<tr>
+													<td style="border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+														<table width="100%" cellpadding="0" cellspacing="0" border="0">
+															<tr>
+																<!-- Checkmark -->
+																<td
+																	style="width: 24px; vertical-align: middle; padding-right: 12px;">
+																	<table cellpadding="0" cellspacing="0" border="0">
+																		<tr>
+																			<td
+																				style="text-align: center; vertical-align: middle; background-color: #FFFFFF;">
+																				<span
+																					style="color: #1F2937; font-size: 13px; font-weight: bold; line-height: 14px;border: 2px solid #1F2937;border-radius: 100%;padding:6px;">✓</span>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+																<!-- Text -->
+																<td style="text-align: left; vertical-align: middle;">
+																	<p
+																		style="margin: 0; color: #000;font-family: Montserrat;font-size: 16px;font-style: normal;font-weight: 400;line-height: 28px; /* 175% */letter-spacing: 0.5px;">
+																		Stay tuned with our updates
+																	</p>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0"
+						style="max-width: 600px; margin: 0 auto;">
+						<tr>
+							<td style="padding: 20px; text-align: center;">
+								<!-- Circle Container -->
+								<table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+									<tr>
+										<td
+											style="width: 120px; height: 120px; background-color: #EEF2F6; border-radius: 50%; text-align: center; vertical-align: middle;">
+											<!-- Inner Icon Container -->
+											<table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+												<tr>
+													<td
+														style="width: 48px; height: 48px; background-color: #9CA3AF; border-radius: 4px; text-align: center; vertical-align: middle; position: relative;">
+														<!-- Mountain Icon -->
+														<div style="position: relative; width: 48px; height: 48px;">
+															<div
+																style="position: absolute; bottom: 12px; left: 8px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 15px solid #E5E7EB;">
+															</div>
+															<div
+																style="position: absolute; bottom: 12px; right: 8px; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid #D1D5DB;">
+															</div>
+															<div
+																style="position: absolute; top: 14px; right: 14px; width: 6px; height: 6px; background-color: #F3F4F6; border-radius: 50%;">
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table class="col-sm-12 height-auto" border="0" cellpadding="0" cellspacing="0" width="100%"
+						style="width: 100%; max-width: 100%; min-width: 100%; background-color: #F3F1FA;"
+						bgcolor="#F3F1FA">
+						<tbody>
+							<tr>
+								<td class="col-sm-6 text-center pv-5"
+									style=" text-align:center; width: 154px; padding: 30px 0; color: #3F484F; font-size: 11px; line-height: 1.3em; font-family: Montserrat, sans-serif;">
+									<div>
+										<span>© 2025 VISBL. All rights reserved.</span><br><br><br>
+
+										<a href="https://www.facebook.com/people/Visbl/61563372264589/" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/facebook.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.instagram.com/visblsearch" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/instagram.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://x.com/visblsearch" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/twitter.png"
+												alt="" style="width:46px;">
+										</a>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.linkedin.com/company/89599705/" target="_blank"
+											style="text-decoration: none;">
+											<img src="https://stavisbl.wpenginepowered.com/wp-content/uploads/2025/09/linkedin.png"
+												alt="" style="width:46px;">
+										</a>
+
+										<br><br><br>
+										<a href="http://"
+											target="_blank">Unsubscribe</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a
+											href="mailto:getvisbl@visbl.com" target="_blank">Contact Us</a> <br><a
+											href="http://" target="_blank">View in browser</a>
+
+
+									</div>
+								</td>
+
+
+							</tr>
+						</tbody>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</center>
+</body>
+
+</html>
